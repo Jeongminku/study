@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>탭의 제목을 정하는 부분입니다.</title>
+    <style>
+      table, th, td {
+        border:1px solid #ccc;
+        border-collapse: collapse;
+      }
+      th, td { padding:10px 20px; }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- colgroup을 통하여 열을 묶고 style="background-color: 색상;" 을 활용하여 뒷 배경색을 넣을 수 있습니다. -->
+        <colgroup>
+            <col span="2" style="background-color: red;"
+        </colgroup>
+        
+        <!-- <caption>옵셔널(해도 되고 안해도 됌) </caption> -->
+        <caption>게시판</caption>
+    <!-- thead 옵셔널 -->
+        <thead>
+        <tr>
+            <!-- th는 테이블 헤더 // 중앙정렬 및 볼드 // 옵셔널(해도 되고 안해도 됌)-->
+            <th>제목</th>
+            <th>날짜</th>
+            <th>조회수</th>
+        </tr>
+    </thead>
+    <!-- tbody 옵셔널 -->
+    <tbody>
+        <tr>
+            <td>안녕하시</td>
+            <td>2022년 1월 2일</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>안녕하시에요</td>
+            <td>2022년 1월 3일</td>
+            <td>5234</td>
+        </tr>
+        <tr>
+            <td>안녕하세요</td>
+            <td>2022년 1월 4일</td>
+            <td>5457</td>
+        </tr>
+    </tbody>
+    <!-- tfoot 옵셔널 -->
+        <tfoot>
+            <tr>
+                <td>가정용</td>
+                <td>5kg</td>
+                <td>18~26과</td>
+              </tr>
+        </tfoot>
+    </table>
+    </tbody>
+</body>
+</html>

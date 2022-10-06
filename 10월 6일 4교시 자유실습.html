@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border:1px solid #ccc;
+          border-collapse: collapse;
+        }
+        th, td { padding:10px 20px; }
+        table{text-align: center;}
+      </style>
+</head>
+<body>
+    <h1>h1태그는 가장 큰 글씨</h1>
+    <h6>h6태그는 가장 작은 글씨를 나타낸다</h6>
+    <p>p를 사용하여 일반 문장을 적을 수 있다. p의 경우 자동 줄바꿈이 된다.</p>
+    <p>일반문장을 적다가<sup>sup를사용</sup>글자가 위로 가진다</p>
+    <p>똑같이 문장을 적다가<sub>sub를 사용하면</sub>글자가 밑으로 달림</p>
+    <blockquote>blockquote는 인용문 쓰듯이 들여쓰기가 가능해진다</blockquote>
+    <strong>strong의 경우 굵게 표시+소리강조, 소리+눈(굵기)가 굵어진다</strong>
+    <br />줄바꿈을 위해서는 br / 를 사용한다<br />
+    <em>em의 경우 i를 쓴 이탤릭처럼 똑같이 옆으로 기울어지지만, 소리가 강조된다</em>
+    <br />
+    글자가 작아지는 small은 보통 저작권을 표기할때 사용한다 (이것은 small사용하지 않은 일반 글자)
+    <br />
+    <small>글자가 작아지는 small 보통 저작권 등을 표기할 때 사용한다</small>
+    <br />
+    <s>s를 사용하면 취소선이 그어진다 del과의 차이점이 중요한지 알아봐야할것같다.</s>
+    <br />
+    <p>일반적으로 사용하다가 지우고싶은내용에는 <del>del을 사용하고</del><ins>ins는 새로운 내용이 추가되고 강조될때 사용한다</ins></p>
+    <br />
+       
+    <hr />
+    <h2>지금부터는 목록태그입니다</h2>
+    <p>ol 태그는 order list 로써, 순서가 있는 리스트를표기할 때 사용합니다.</p>
+    <ol>
+        <li>리스트순서 하나</li>
+        <li>리스트순서 둘</li>
+        <li>리스트순서 셋</li>
+    </ol>
+    <ol type="i">
+        <li>리스트순서 i</li>
+        <li>리스트순서 ii</li>
+        <li>ol type="i"를 먹인 경우</li>
+    </ol>
+    <ol type="A" start="3">
+        <li>타입 A 스타트 3</li>
+        <li>그러면 당연히 C부터 시작합니다</li>
+        <li>여기는 E겠죠</li>
+    </ol>
+    <p>ul 태그는 unordered list 로써, 순서가 없는 리스트를 표기할 때 사용합니다</p>
+    <ul>
+        <li>이와같이</li>
+        <li>리스트순서가</li>
+        <li>표기되지않습니다.</li>
+    </ul>
+    <p>dl 태그는 정의 태그 입니다. 용어와 그에 대한 설명을 리스트 형식으로 표기할때 사용합니다.</p>
+    <p>dl 태그 아래 dt는 제목,단어 // dd는 설명(내용)을 표기할때 사용합니다</p>
+    <h3>상품구성</h3>
+    <dl>
+        <dt>삼성의 대표적인 핸드폰</dt>
+        <dd>갤럭시 S시리즈</dd>
+        <dd>갤럭시 노트</dd>
+    </dl>
+    <br />
+    <hr />
+    <h2> 지금부터는 테이블 관련 태그입니다</h2>
+    <p>row는 행을 column은 열을 뜻합니다</p>
+    <p>테이블 관련 태그는 table 부터 시작합니다.</p>
+    <p>tr은 테이블의 행을 th는 테이블 헤더(열)을 뜻합니다</p>
+    <p>table head와 table body, table foot은 자동으로 생성되지만 코딩시 직접입력하는것도 좋습니다.</p>
+    <p>head에 적은 style의 내용은 다음과 같습니다    <style>
+/*     <style>
+      table, th, td {
+        border:1px solid #ccc;
+        border-collapse: collapse;
+      }
+      th, td { padding:10px 20px; }
+       table{text-align: center;}
+    </style> */
+ </style></p>
+    <table>
+        <caption>게시판 제목 caption</caption>
+        <colgroup>
+            <!-- <col span="1" style="background-color: blue;">
+            <col span="1" style="background-color: red;">
+            <col span="1" style="background-color: darkorange;"> -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>4</td>
+                <td>올시즌 메이저리그 몇몇 기록들 사진</td>
+                <td>마인컨</td>
+                <td>323</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>김태형 이제 두산하고 계약 못할거 같은데</td>
+                <td>야구보는놈</td>
+                <td>63</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>내 위대함을 알리러왔다!</td>
+                <td>중2휘혈</td>
+                <td>6343</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td> "요즘 아이들은 동심이라는 게 없어"</td>
+                <td>산타santa</td>
+                <td>1225</td>
+            </tr>
+        </tbody>
+    </table>
+    <p> 콜그룹 및 색상(주석있음) colgroup 열고 col span=숫자만큼 style="background-color: 색상;" /colgroup</p>
+    <!-- <colgroup> -->
+        <!-- <col span="1" style="background-color: blue;"> -->
+        <!-- <col span="1" style="background-color: red;"> -->
+        <!-- <col span="1" style="background-color: darkorange;"> -->
+    <!-- </colgroup> -->
+</body>
+</html>
