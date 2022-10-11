@@ -1,0 +1,7 @@
+        /* 2. 내부 스타일 작성법 */
+        h1{
+            color: aqua; font-style: italic; 
+        }
+        p{
+            color: red; font-size: 20px;
+        }

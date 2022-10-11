@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*1. 전체 선택자 : *
+         전체선택자 *은 전체태그, body, head, html까지도 적용된다. */
+        /* *{
+            color: aquamarine;
+            font-style: 20px;
+        } */
+        
+        /* 2. 태그(타입) 선택자 : 태그 */
+        /* p{
+            color: blueviolet;
+        } */
+
+        /* 3. 클래스 선택자 : .클래스 명 */
+        .title {
+            font-size: 6px;
+            color: red;
+        }
+        .on{
+            font-style: italic;
+        }
+        /* 4. id 선택자 : #아이디 명   (중복X)*/
+        /* #board{
+            color: coral;
+        }
+        #contents{
+            color: royalblue;
+        } */
+    </style>
+</head>
+<body>
+    <!-- ★class명은 의미가 있는 이름으로 (같이 적용할 녀석은 이름을 같게) -->
+    <!-- ★id명은 의미가 있는 이름으로 다르게 해줘야 한다. id는 유일한 값 이기 때문(중복X)-->
+    <h1 class="title on" id="board">자유게시판</h1>
+    <p class="title" id="contents">안녕하세요. p태그 내용입니다.</p>
+    <span class="title2 on">span태그 입니다.</span>
+    <form>
+        <input type="text" name="user_id" id="user_id">
+    </form>
+</body>
+</html>
