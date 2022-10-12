@@ -1,0 +1,71 @@
+@charset "utf-8"; /* 인코딩해서 깨지지 않게 만들어줌 */
+
+/* (가장 먼저 해야할 것) 초기화 코드 */
+/* 브라우저에 100%를 줘도 기본 마진,패딩이 잡혀있어 여백이 생기기때문에 기본 여백을 0으로 만들어 주는 것. */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ccc;
+    padding: 20px;
+}
+/* id는 #으로 가져오는 것 */
+#signup {
+
+}
+/* 한칸 띄어서 작성 = 자신 + 자손태그 전부 가져오기 */
+#signup fieldset {
+
+}
+
+/* type 같은경우 부모 안에있는 A요소(fieldset) 안에서 어떤것을 선택할 것인지. */
+/* 제출 버튼 */
+#signup fieldset:last-of-type {
+
+}
+
+/* 로그인 정보, 개인정보 - legend */
+#signup legend {
+
+}
+
+/* 로그인정보 li 와 개인정보 li를 전부 선택함. */
+#signup ul li {
+
+}
+
+/* label 요소 전부 선택 */
+#signup label {
+
+}
+
+/* 제출 버튼 */
+#signup button {
+
+}
+
+/* input 타입이 text, password, tel, email 을 가진 */
+#signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email] {
+
+}
+
+/* input에서 required 속성을 가진 */
+#signup input[required] {
+
+}
+
+/* input에서 readonly 속성을 가진 */
+#signup input[readonly] {
+
+}
+
+/* 버튼에 마우스 올렸을때 */
+#signup button:hover {
+
+}
+
+
+
+
