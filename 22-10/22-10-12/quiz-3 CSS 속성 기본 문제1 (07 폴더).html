@@ -17,28 +17,34 @@
     .heading {
       background-color: #eee;
     }
-    
   </style>
-</head>
-  
+</head> 
 <body>
   <table>
     <caption>2019 국민 독서실태</caption>
+    <colgroup>
+      <!-- <col span="1" class="heading"> -->
+      <!-- col의 기본값이 1 -->
+      <col class="heading">
+      <col>
+      <col>
+      <!-- <col> 빈칸 2개는 내가 스타일을 적용하지 않는 셀도 실제 표에 맞게 표기해준 것. -->
+    </colgroup>
     <thead>
-      <tr>
-        <th class="heading">구분</th>
-        <th class="heading">성인</th>
-        <th class="heading">독서자</th>
+      <tr class="heading">
+        <th>구분</th>
+        <th>성인</th>
+        <th>독서자</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th class="heading">종이책</th>
+        <th>종이책</th>
         <td>6.1권</td>
         <td>11.8권</td>
       </tr>
       <tr>
-        <th class="heading">전자책</th>
+        <th>전자책</th>
         <td>1.2권</td>
         <td>7.1권</td>
       </tr>
