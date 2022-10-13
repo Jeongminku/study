@@ -10,12 +10,14 @@
       height: 100px;
       background-color: #07f;
       border: 1px solid #222;
-      transition-property: width, height;  /* 트랜지션 대상 - 너비, 높이 */
-      transition-duration: 2s, 1s;  /* 트랜지션 시간 - 2초, 1초 */
+      transition-property: width, height, background-color;  /* 트랜지션 대상 - 너비, 높이 */
+      transition-duration: 2s, 1s, 4s; /* 트랜지션 시간 - 2초, 1초 */
+      transition-delay: 10s, 1s, 1s; /* 딜레이를 걸 수 있음. */
     }
     .box:hover {
       width: 200px;
-      height: 120px;		
+      height: 120px;
+      background-color: red;		
     }
 	</style>
 </head>
