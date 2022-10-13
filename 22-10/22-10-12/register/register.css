@@ -13,57 +13,92 @@ body {
 }
 /* id는 #으로 가져오는 것 */
 #signup {
-
+    background: #fff;
+    border: 1px solid #222;
+    border-radius: 5px; /* 보더를 원형으로 만드는것 */
+    padding: 20px; /* 보더를 기준으로 안쪽에 있는것. */
+    width: 400px;
 }
 /* 한칸 띄어서 작성 = 자신 + 자손태그 전부 가져오기 */
 #signup fieldset {
-
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
 }
 
 /* type 같은경우 부모 안에있는 A요소(fieldset) 안에서 어떤것을 선택할 것인지. */
 /* 제출 버튼 */
 #signup fieldset:last-of-type {
-
+    border: none;
 }
 
 /* 로그인 정보, 개인정보 - legend */
 #signup legend {
-
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
 }
 
 /* 로그인정보 li 와 개인정보 li를 전부 선택함. */
 #signup ul li {
-
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
 }
 
 /* label 요소 전부 선택 */
 #signup label {
-
+    float: left;
+    font-size: 13px;
+    width: 110px;
 }
 
 /* 제출 버튼 */
 #signup button {
-
+    border: 1px solid #222;
+    border-radius: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 7px 25px;
+    display: block;
+    margin: 0 auto; 
+    /* 가운데 정렬할때 쓰는데 인라인에는 안먹음. 그래서 버튼태그를 블록block태그로 바꿔야 */
 }
 
 /* input 타입이 text, password, tel, email 을 가진 */
 #signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email] {
-
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
 }
+
+/* #singup ~~ email] 까지를 대체하는 방법 */
+/* #signup input:not([type=radio]) {    <- 타입이 라디오가 아닌것 전부를 선택함.
+     border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;   
+} */
+
 
 /* input에서 required 속성을 가진 */
 #signup input[required] {
-
+    border: 1px solid red;
 }
 
 /* input에서 readonly 속성을 가진 */
 #signup input[readonly] {
-
+    border: none;
 }
 
 /* 버튼에 마우스 올렸을때 */
 #signup button:hover {
-
+    background: #222;
+    color: #fff;
 }
 
 

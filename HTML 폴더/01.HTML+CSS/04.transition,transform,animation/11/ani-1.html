@@ -17,34 +17,36 @@
 		#box1 {
 			background-color: #4cff00;
 			border: 1px solid transparent;
-			animation-name: shape;  /* 애니메이션 지정 */ 
-			animation-duration: 3s;  /* 애니메이션 실행 시간 */
+			animation-name: shape;
+			animation-duration: 3s; /* X초에 걸쳐서 실행하겠다 */
+			animation-iteration-count: 2; /* 반복 횟수 */
+			animation-delay: 5s; /* 최초 실행까지의 딜레이 */
+			animation-direction: reverse; /* 기본값 normal, 애니메이션 진행방향  */
+			animation-timing-function: linear; /* 키 프레임의 전환 형태를 지정 */
+			animation-direction: alternate; /* 홀수번째 normal / 아닐때는 reverse로 진행 */
 		}
 		#box2 {
 			background-color: #8f06b0;
 			border: 1px solid transparent;
-			animation-name: rotate;  /* 애니메이션 지정 */
-			animation-duration: 3s;  /* 애니메이션 실행 시간 */
+			animation-name: rotate;
+			animation-duration: 2s; /* X초에 걸쳐서 실행하겠다. */
 		}
-
-		@keyframes shape { /* shape 애니메이션 정의 */
+		/* shape 애니메이션 정의 */
+		@keyframes shape {
 			from {
-				border: 1px solid transparent;  /* 1px짜리 투명한 테두리 */
+				border: 1px solid transparent; /* transparent = 투명하게 */
 			}
 			to {
-				border: 1px solid #000;  /* 검정색 테두리 */
-				border-radius: 50%;  /* 테두리를 둥글게 */
+				border: 1px solid #000;
+				border-radius: 50%; /* 테두리를 둥글게 border-radius */
 			}
+		}
+		/* rotate 애니메이션 정의 */
+		@keyframes rotate {
+			from { transform: rotate(0deg);}
+			to { transform: rotate(45deg);}
 		}
 
-		@keyframes rotate {  /* rotate 애니메이션 정의 */
-			from {
-				transform:rotate(0deg)  /* 시작은 0도에서 */
-			}
-			to {
-				transform: rotate(45deg);  /* 45도까지 회전 */
-			}
-		}
 	</style>
 </head>
 
