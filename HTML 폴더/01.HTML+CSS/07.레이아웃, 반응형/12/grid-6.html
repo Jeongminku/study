@@ -8,12 +8,20 @@
     #wrapper{
     width: 700px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/*     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 100px);
     grid-template-areas: 
       "box1 box1 box1"
       "box2 box3 box3"
+      "box2 . box4";*/
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 100px);
+      grid-template-areas: 
+      "box1 box1 box1"
+      "box2 box3 box3"
       "box2 . box4";
+      ;
+
   }
   .box{
     padding: 15px;
@@ -23,19 +31,24 @@
   }   
   .box1 {
     background-color: #3689ff;
-    grid-area: box1;
+/*     grid-area: box1; */
+    grid-area: box1; /* 박스 이름지어준것 */
   }
   .box2 {
     background-color: #00cf12;
-    grid-area: box2;
+/*     grid-area: box2; */
+    grid-area: box2; /* 박스 이름지어준것 */
   }
   .box3 {
     background-color: #ff9019;
-    grid-area: box3;
+/*     grid-area: box3; */
+    grid-area: box3; /* 박스 이름지어준것 */
     }
   .box4 {
     background-color: #ffd000;
-    grid-area: box4;
+/*     grid-area: box4; */
+    grid-area: box4; /* 박스 이름지어준것 */
+
   }
   </style>
 </head>

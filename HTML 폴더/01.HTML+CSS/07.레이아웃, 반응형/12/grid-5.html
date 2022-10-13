@@ -8,6 +8,8 @@
     #wrapper{
     width: 700px;
     display: grid;
+/*     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px); */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 100px);
   }
@@ -19,21 +21,27 @@
   }   
   .box1 {
     background-color: #3689ff;
-    grid-column: 1/4;
+/*     grid-column: 1/4; */
+    grid-column: 1/4 /* 1부터 4까지 먹겠다 */;
   }
   .box2 {
     background-color: #00cf12;
+/*     grid-row: 2/4; */
     grid-row: 2/4;
   }
   .box3 {
     background-color: #ff9019;
+/*     grid-column: 2/4;
+    grid-row-start: 2; */   /* 시작과 끝을 같이 지정 grid-row:2/3; */
     grid-column: 2/4;
-    grid-row-start: 2;   /* 시작과 끝을 같이 지정 grid-row:2/3; */
+    grid-row-start: 2;
     }
   .box4 {
     background-color: #ffd000;
-    grid-column-start: 3;   /* 시작과 끝을 같이 지정 grid-column:3/4 */
-    grid-row-start: 3;      /* 시작과 끝을 같이 지정 grid-row:3/4 */
+/*     grid-column-start: 3; */   /* 시작과 끝을 같이 지정 grid-column:3/4 */
+/*     grid-row-start: 3; */      /* 시작과 끝을 같이 지정 grid-row:3/4 */
+    grid-column-start: 3;
+    grid-row-start:3;
   }
   </style>
 </head>
