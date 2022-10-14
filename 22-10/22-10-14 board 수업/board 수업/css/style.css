@@ -278,3 +278,77 @@ a {
     line-height: 160%; /* 문단 간격 */
     font-size: 1.4rem; 
 }
+
+
+/* 768 ~ 1000px */
+@media all and (max-width: 1000px) {
+    .wrap {
+        width: 100vw;
+    }
+
+    .board_wrap {
+        width: 100vw;
+    }
+}
+
+/* 반응형으로 만들기 */
+/*  0~ 767 px 일때 */
+/* 미디어 쿼리 작성 */
+@media all and (max-width: 767px) {
+    .wrap {
+        width: 95vw; /* 뷰포트의 95% */
+        /* 마진 0 오토 안쓰는 이유는 이미 위에서 썼기때문.
+        미디어쿼리에는 내가 바꾸고싶은 부분만 적으면 된다. */
+    }
+    
+    .board_list th:nth-of-type(1),
+    .board_list td:nth-of-type(1) {
+        display: none;
+    } /* 767px 밑으로 내려가면 첫번째 열 (번호) 부분이 사라진다. */
+
+    .board_list th:nth-of-type(3),
+    .board_list td:nth-of-type(3) {
+        display: none;
+    }
+    .board_list th:nth-of-type(4),
+    .board_list td:nth-of-type(4) {
+        display: none;
+    }
+
+
+    .board_wrap {
+        width: 100vw;
+    }
+
+    .board_write .info dt {
+        width: 70px;
+    }
+
+    .board_write .info dt {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .board_write .info input[type="text"],
+    .board_write .info input[type="password"]
+
+    .board_view .info dl {
+        padding: 0 10px;
+    }
+
+    .board_view .info dl dt,
+    .board_view .info dl dd {    
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .board_view .info dl::before {
+        display: none;
+    }
+
+    .board_view .info dl:nth-of-type(1),
+    .board_view .info dl:nth-of-type(3) {
+        display: none;
+    }
+
+}
