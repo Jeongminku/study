@@ -1,0 +1,280 @@
+@charset "utf-8"; /* 깨지지않게 인코딩 먼저 */
+
+/* 초기화 속성 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html { /* 전체적인 폰트 사이즈 */
+    font-size: 10px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* 공통 버튼 */
+
+.bt_wrap {
+    margin-top: 30px;
+    text-align: center;
+}
+.bt_wrap a { /* a태그는 인라인태그이므로 블록태그 쓰기위해 inline-block */
+    display: inline-block;
+    min-width: 80px; /* 80px 이하로는 버튼이 작아지지않게 최소수치 설정 */
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.bt_wrap a:hover {
+    text-decoration: underline;
+}
+
+.bt_wrap a.on {
+    background: #000;
+    color: #fff;
+}
+
+
+/* index.html */
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.board_list{
+    width: 100%;
+    border-top: 1px solid orange;
+    border-collapse:collapse; /* 내부 선을 하나로 */
+    font: size 1.5rem; /* rem = html이 기준 // em = 부모태그가 기준*/
+}
+
+.board_list caption {
+    padding: 30px;
+}
+
+.board_list th, td{
+    border-spacing: 0;
+    border-bottom: 1px solid blue;
+    padding: 10px; /* 간격 */
+    text-align: center; /* 텍스트 중앙정렬 */
+}
+
+.board_list td.title > a:hover{/* td.title td태그면서 and title태그를 가진것 */
+    text-decoration: underline;
+}
+
+.bt_list {
+    text-align: right;
+}
+
+.board_page {
+    margin-top: 30px;
+    text-align: center;
+    display: flex; /* 확인하기 반응형 할때 쓰려고*/
+    justify-content: center; /* 확인하기 flex 정렬*/
+}
+
+.board_page a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    /* border, padding을 포함해서 32px, 32px 정사각형 사이즈 */
+    box-sizing: border-box;
+    border-left: 0;
+    line-height: 32px;
+}
+
+.board_page a:hover{
+    text-decoration: underline;
+}
+
+.board_page a.bt {
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.board_page a.num {
+    font-size: 1.4rem;
+}
+
+.board_page a.num.on {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+/* index 작성끝 */
+
+/* write.html, view.html 공통적용 */
+
+.board_wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.board_title {
+    margin: 30px 10px ;
+}
+
+.board_title strong {
+    font-size: 3rem;
+}
+
+.board_title p {
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+
+/* write.html 에만 적용은 지금부터 */
+
+.board_write {
+    border-top: 2px solid red;
+}
+
+.board_write .title,
+.board_write .info {
+    padding: 15px;
+}
+
+.board_write .info {
+    border-top: 1px dashed blue;
+    border-bottom: 1px solid green;
+    font-size: 0;
+}
+
+.board_write .title dl{
+    font-size: 0;
+}
+
+
+.board_write .info dl/* dl태그는 블락인데 인라인으로 바꿀것. 한줄에 정렬하기위해서 */{
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle; /* 수직정렬 */
+}
+
+.board_write .title dt,
+.board_write .title dd,
+.board_write .info dt,
+.board_write .info dd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+
+.board_write .title dt,
+.board_write .info dt {
+    width: 100px;
+}
+
+.board_write .title dd {
+    width: calc(100% - 100px); /* calc() 사칙연산이 가능한것 */
+}
+
+.board_write .title input[type="text"],
+.board_write .info input[type="text"],
+.board_write .info input[type="password"] {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.board_write .title input[type="text"] {
+    width: 80%;
+}
+
+.board_write .cont {
+    border-bottom: 1px solid fuchsia;
+}
+
+.board_write .cont textarea {
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 1.4rem;
+    resize: vertical;
+}
+
+
+/* view.html 작성 시작 */
+
+.board_view {
+    width: 100%;
+    border-top: 2px solid red;
+}
+
+.board_view .title {
+    padding: 20px 15px;
+    border-bottom: 1px dashed blue;
+    font-size: 2rem;
+}
+
+.board_view .info {
+    padding: 15px;
+    border-bottom: 1px solid green;
+    font-size: 0;
+}
+
+
+.board_view .info dl{  /* dl 안썼음 확인할것. */
+    position: relative ;
+    /* 뷰 포트를 기준으로 자기 위치잡음 */
+    /* 하위태그로 앱솔루트 사용할거라서 relative 적용. */
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.board_view .info dl:first-child {
+    padding-left: 0;
+}
+
+.board_view .info dl:before {
+    content: "-----";
+    position: absolute;
+    /* relative를 기준으로 absolute는 정렬을 한다. */
+    top: 1px;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+}
+.board_view .info dl:first-child::before{
+    display: none; /* 번호 라고 써있는 글자 앞에 작은 | 사라짐 */
+}
+
+
+.board_view .info dl dt,
+.board_view .info dl dd {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+
+.board_view .info dl dd {
+    margin-left: 10px;
+    color: purple;
+}
+
+.board_view .cont {
+    padding: 15px;
+    border-bottom: 1px solid #000;
+    line-height: 160%; /* 문단 간격 */
+    font-size: 1.4rem; 
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <table class="board_list">
+            <caption>
+                <h1>자유게시판</h1>
+            </caption>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="title"><a href="./view.html">게시판 제목 입니다.</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.01</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="title"><a href="./view.html">게시판 제목 입니다.</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.01</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="title"><a href="./view.html">게시판 제목 입니다.</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.01</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="title"><a href="./view.html">게시판 제목 입니다.</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.01</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="title"><a href="./view.html">게시판 제목 입니다.</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.01</td>
+                    <td>72</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="title"><a href="./view.html">게시판 제목 입니다.</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.01</td>
+                    <td>62</td>
+                </tr>
+            </tbody>
+        </table>
+
+            <!-- 글쓰기 버튼 공간 -->
+        <div class="bt_wrap bt_list"> <!-- 클래스 2개 넣은것 -->
+            <a href="./write.html">글쓰기</a>
+        </div>
+
+            <!-- 페이징 버튼 공간 -->  <!-- &lt; = 왼쪽꺾쇠 1개 // &gt; = 오른쪽 꺾쇠 1개 -->
+        <div class="board_page">
+            <a href="#" class="bt first">&lt;&lt;</a>
+            <a href="#" class="bt prev">&lt;</a>
+            <a href="#" class="num on">1</a>
+            <a href="#" class="num">2</a>
+            <a href="#" class="num">3</a>
+            <a href="#" class="num">4</a>
+            <a href="#" class="num">5</a>
+            <a href="#" class="bt next">&gt;</a>
+            <a href="#" class="bt last">&gt;&gt;</a>
+
+        </div>
+    </div>
+</body>
+</html>
