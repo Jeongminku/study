@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 증감 연산자 </title>
+<script>
+	var num1 = 10;
+	var num2 = 20;
+	var result;
+	
+	num1--; //9
+	document.write(num1, "<br>");
+
+	num1++; //10
+	document.write(num1, "<br>");    
+
+	result = num2++;  //result: 20, num2: 21  
+	document.write(result, "<br>"); 
+	/* 후위 연산자의 경우에는 선대입 후증가
+	num2가 result에 먼저 대입된다 -> result = 20 이 된다. (먼저 대입된 값 20)
+	그 다음에 증가가 되므로 num2는 21이 된다.*/
+
+
+	/* 여기서 num2는 21부터 시작함. */
+	result = ++num2;  //result: 22, num2: 22  
+	document.write(result, "<br>"); 
+	/* 전위 연산자는 먼저 증가 후 후대입 이다.
+	num2는 21이었다 (위에서 이미 21이기때문) + 증가 1을 시킴 = 22가 됌.
+	result에 22가 들어감.   num2도 22가 됌.*/
+
+</script>
+</head>
+<body>
+</body>
+</html>

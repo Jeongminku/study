@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // alert("test!");
+
+        // confirm("확인하시겠습니까?");
+        
+        // prompt("입력하세요",10);
+
+        // console.log("안녕하세요"); /* -> 콘솔창에 출력 */
+        // document.write("반갑습니다"); /* -> 브라우저에 출력 */ 
+
+        // var num = 2;  /* num은 변수 = 2는 변수값 */   
+        // console.log(num);  
+
+        // var str = "test"; /* 문자형 */
+        // console.log(str);
+
+        // var str2 = "i " + "am " +  str ;
+        // console.log(str2)
+
+        
+        // var str3 = "1" ; 
+        // var sum = 10;
+        // console.log(str3 + sum);
+        // // ★더하기를 할 때 하나라도 문자형이 있으면 문자열 합산을 한다.
+
+        // console.log(str3 + sum);
+        // console.log("안녕하세요. 저는 \"하서\"입니다.")
+        // // "따옴표를 출력하고싶다면  \"  \"  출력하고싶은 따옴표 앞에 역슬래시를 넣어준다
+
+        // console.log("안녕하세요. \n저는 하서입니다.")
+        // // 줄바꿈을 하고싶다면 \n 줄바꿈      \t 는 탭키 누른효과
+
+        // var num = 9; /* 숫자형 */
+        // var num2 = 2;
+        // var sum = num + num2 ;
+        // console.log(num + num2); /* 덧셈 */
+        // console.log(num - num2); /* 뺄셈 */
+        // console.log(num * num2); /* 곱셈 */
+        // console.log(num / num2); /* 나눗셈 */
+        // console.log(num % num2); /* 나머지 */
+        // console.log(sum) ;
+
+
+        // var flag = "가타" == "12"; /* 불린 Boolean 형 */
+        // console.log(flag) ;
+
+        // == 과 ===의 차이  값비교 vs 값 + 자료형 비교
+        // var a = 10;
+		// var b = 20;
+		// var c = 10;
+		// var f = "20";
+
+        // var result = b == f;
+		// var result2 = b === f;
+
+        // console.log(result);
+        // console.log(result2);
+        
+        // var a; /* undefined 값이 정의되지 않음 */
+        // var b = null; /* null 빈 값 */
+
+        // console.log(a); 
+        // console.log(b);
+
+        // // undefined, null, 빈문자열(''), 0 을 제외한 모든 것은 true 이다.
+
+        // console.log(Boolean(4));
+
+
+
+        // && AND      두개가 true 여야 true값 출력
+        // || OR       하나만 true 여도 ture 값 출력
+        // !  NOT      반대로
+        var flag1 = true, flag2 = false, flag3 = true;
+        console.log(flag1 && flag2 && flag3)
+        console.log(flag1 || flag2 && flag3)
+        console.log(!flag1)
+
+        var flag1 = 10>2, flag2 = 10<5, flag3 = 2>=1;
+        console.log(flag1 && (flag2 && flag3))
+        console.log(flag1 || flag2 && flag3)
+        console.log(!flag1)
+
+        console.log(typeof(flag1))
+        
+    </script>
+</body>
+</html>
