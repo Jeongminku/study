@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const date = new Date(); // 날짜, 시간 객체
+        const hour = date.getHours(); // 현재 시간을 구하는 것
+        console.log(hour)
+
+
+        // && 둘다 true 면 true 
+        if(hour >= 6 && hour < 12 ) { /* 6~11까지 걸림. */
+            alert('오전입니다.');
+        } else if(hour >= 12 && hour <= 18) { /* 12~18 */
+            alert('오후입니다');
+        } else {
+            alert('저녁입니다')
+        }
+
+
+    </script>
+</body>
+</html>

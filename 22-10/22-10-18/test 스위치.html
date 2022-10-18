@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스위치</title>
+</head>
+<body>
+    <script>
+        const input = Number(prompt('숫자를 입력하세요',0));
+        const str = "국어";
+        /* 스위치 (계산된 값) 이 case에 있는 "value" 에 들어감. */
+        switch (input % 2) {
+            // case value:
+            case 0: 
+                alert('짝수입니다.');
+                break;
+            
+            case 1: 
+                alert('홀수입니다.');
+                break;
+        
+            /* case에 해당이 안될 경우 실행시킬 것 : default */
+            /* default문 생략 가능합니다. */
+            default:
+                alert('숫자가 아닙니다.')
+                break;
+        }
+            /* break를 만나는 순간 switch문을 벗어난다. */
+
+
+
+        /* 스위치 안에는 "문자" 도 넣을 수 있다. */
+        switch (str) {
+            case "수학":
+                alert('수학입니다');
+                break;
+            case "국어":
+                alert('국어입니다');
+                break;
+            case "과학":
+                alert('과학입니다');
+                break;
+        }
+
+        
+    </script>
+</body>
+</html>
