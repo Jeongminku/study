@@ -12,9 +12,28 @@
         const math2 = Number(prompt("두번째 숫자를 입력해주세요",));
         const math3 = Number(prompt("세번째 숫자를 입력해주세요",));
         
-        const array = [math1,math2,math3];
-        document.write("최소값: " + Math.min.apply(null, array));
-        document.write("최대값: " + Math.max.apply(null, array));
+        
+        if(math1 > math2 && math1 > math3){
+            document.write("최대값: " + math1);
+        }else if(math1 > math2 && math1 < math3){
+            document.write("최대값: " + math3);
+        }else if(math1 < math2 && math2 > math3){
+            document.write(`최대값: ` + math2);
+        }else /* if(math1 < math2 && math2 < math3) */{
+            document.write(`최대값: ` + math3);
+        }
+
+        if(math1 > math2 && math2 < math3){
+            document.write("최소값: " + math2);
+        }else if(math1 > math2 && math2 > math3){
+            document.write("최소값: " + math3);
+        }else if(math1 < math2 && math1 > math3){
+            document.write(`최소값: ` + math3);
+        }else /* if(math1 < math2 && math1 < math3) */{
+            document.write(`최소값: ` + math1);
+        }
+               
+        
         document.write("합계: " + (math1+math2+math3));
         document.write("평균값: " + (math1+math2+math3)/3 );
     </script>

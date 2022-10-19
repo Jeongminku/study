@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while과 do while</title>
+</head>
+<body>
+    <script>
+    /* while(조건식){
+        조건식이 참일때 실행
+    } 
+    조건식이 true일때만 { 중괄호 내부 실행  }
+
+
+    while이 맞아야 조건식을 실행함.
+    */
+
+        let i = 0
+        const arr = [1, 2, 3, 4, 5]
+
+    // while (i < arr.length) {
+    //     console.log(`${i}: ${arr[i]}`);
+    //     i++;
+    // }
+    
+    
+    //     // i = i + 1; //  두개가
+    //     //    i++;    //  같음
+
+
+
+
+    /* -- do {
+        실행 후 비교
+    } while(조건식) 
+    
+    do 안에있는 { 먼저실행 }  그 다음에 while을 비교함.
+    만약 while의 조건식이 true면 do로 돌아가서 또 실행함.
+    이것을 반복한다.
+
+    조건식을 실행한 후에 while을 확인함.
+    */
+
+
+
+
+    do {
+        console.log(`${i}`);
+        i++;
+
+    } while (i < 10)
+
+
+
+    </script>
+</body>
+</html>

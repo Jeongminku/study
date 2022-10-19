@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 정의 방법 3</title>
+</head>
+<body>
+    <script>
+        // 함수 정의 3 (ES6) 화살표 함수
+        /* const sum = (매개변수 1, 매개변수 2) => {
+            }       */
+        // const sum = (a, b) => {
+        //     let sum = a + b;
+        //     console.log(sum);
+        // }
+
+        const sum2 = (a) => {
+            let sum = a;
+            console.log(sum);
+        }
+
+        sum2(1)
+
+        // 화살표함수는 매개변수가 1개밖에 없을때 괄호 생략 가능
+
+        const sum3 = a => {
+            let sum = a;
+            console.log(sum);
+        }
+
+        sum3(3)
+    </script>
+</body>
+</html>

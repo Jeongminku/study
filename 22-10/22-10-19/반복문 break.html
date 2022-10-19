@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let i = 0; true; i++) {
+            alert(i + `번째 반복문 입니다.`)
+            
+            const isContinue = confirm(`계속하시겠습니까?`)
+            // 확인 누르면: true  -> isContinue는 true 값이 됌.
+            // 취소 누르면: false -> isContiunue는 false 값이 됌.
+
+            // !가 붙으면 값을 뒤집음 -> isContinue가 false값이 됌. 중괄호를 수행하지 않게됌.
+            // !가 붙어서 isContinue가 false값일때 -> true값으로 바뀜. 중괄호 수행함.
+            // break;가 실행되면 반복문 모두 정지.
+            if(!isContinue) {
+                break;
+            }
+        }
+
+
+        alert(`프로그램 종료`)
+    </script>
+</body>
+</html>

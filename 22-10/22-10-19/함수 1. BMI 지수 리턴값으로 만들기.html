@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 지수</title>
+</head>
+<body>
+    <script>
+        // 문제. bmi 지수 계산하는 함수만들기
+        // 매개변수에는 몸무게와 신장.
+        // return값은 bmi 지수를 리턴
+        // 세가지 모양의 함수로 만들기 (익명, 비익명, 화살표)
+        // BMI 지수 = 몸무게(kg) / (신장(m) x 신장(m))
+
+
+    // <비익명>
+        // function bmi(a, b) {  
+        //     let bmi = a / (b * b);
+        //     return bmi; /* 값을 되돌려주는 return */
+        // }
+        // let result = bmi(50, 2);
+        // document.write(result)
+
+    // <익명>
+
+        // var bmi2 = function(c, d) {
+        //     var bmi2 = c / (d * d);
+        //     return bmi2;
+        // }
+
+        // let result2 = bmi2(100,4);
+        // document.write(result2)
+
+    // <화살표 함수>
+
+        const bmi = (w, h) => {
+            let bmi = w / (h * h);
+            return bmi;    
+        }
+        const result = bmi(10,2);
+        document.write(result);
+    </script>
+</body>
+</html>
