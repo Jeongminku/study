@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<!--
+    콜백함수 - 타이머함수 - setTimeout, setInterval
+
+    clearInterval은 setInterval을 종료시키는 언어입니다.
+    clearInterval을 사용하기 위해서는 (변수명) 을 넣어주어야 합니다.
+    setInterval 앞에 변수명을 작성하여 clearInterval(변수명)에 넣어주면
+    clearInterval이 작동하면서 종료됩니다.
+
+ -->
+<body>
+    <script>
+        /* setTimeout(function(){
+            으로도 사용 가능
+        }) */
+
+
+
+        /* setInterval(() => {
+            
+        }, interval); */
+
+
+
+        /* setInterval(() => {
+            
+        }, 실행시킬 시간); */
+        
+
+                                // 1000 = 1초
+        // setTimeout(()=>{
+        //     console.log(`2초 후에 실행됩니다`)
+        // }, 2000)
+
+
+        let cnt = 0;
+        let ID = setInterval(() => {
+            console.log(`2초  마다  실행됩니다 ${cnt}회 실행되었습니다.`)
+            cnt++;
+        }, 2000);
+
+         setTimeout(() => {
+            console.log(`타이머를 종료합니다.`)            
+            clearInterval(ID)
+        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- 
+      매개변수로 max([1,2,3,4])를 받아 최대값을 구하는 함수)
+      매개변수로 max(5,6,7,8)를 받아 최대값을 구하는 함수)
+     -->
+    <script>
+      function max(first, ...rests) {
+        let output
+        let items
+
+        if (Array.isArray(first)) {
+          output = first[0] /* 첫번째 배열값 을 넣음    값 : 5 */
+          items = first /* [5,6,7,8] */
+        } else if (typeof(first) === `number`) {
+          output = first /* 1 */
+          items = rests /* 2,3,4 */
+        }
+
+        
+        
+        for (const item of items) {
+          
+          if (output < item) {
+            output = item
+          }
+        }
+        return output
+      }
+
+      const testArray = [5, 6, 7, 8]
+      console.log(`최댓값(숫자): ${max(1, 2, 3, 4)}`)
+      console.log(`최댓값(배열): ${max(testArray)}`)
+
+    </script>
+  </head>
+  <body></body>
+</html>

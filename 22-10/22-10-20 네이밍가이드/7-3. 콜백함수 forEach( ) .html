@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach( )</title>
+</head>
+    <!--
+        forEach()
+        넘버스에 있는 모든 배열을 가져와서 value와 index, array를 뽑아낸다.
+        
+
+     -->
+
+     <!-- 
+        forEach(콜백함수)
+      -->
+<body>
+    <script>
+
+        const numbers = [273, 52, 103, 32, 57]
+
+        // 기본 폼
+        // numbers.forEach(function(){
+        //     반복할 코드를 작성
+        // })
+         
+        numbers.forEach(function(value, index, array){
+            console.log(`${array}`)
+            console.log(`${index}번째: ${value}`)
+        })
+    </script>
+</body>
+</html>

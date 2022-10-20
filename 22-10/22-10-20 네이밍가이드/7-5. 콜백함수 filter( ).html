@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter( )</title>
+</head>
+<!-- 
+    filter()
+    조건에 해당하여 true로 달성할 경우 return값으로 넣을 수 있다.
+    0,2,4가 조건에 해당, 즉 true 가 되며
+    return값으로 evenNumbers에 들어간다.
+    그래서 evenNumbers 출력시 짝수값만 나오는 것이다.
+ -->
+
+ <!-- 
+    filter : return값이 true(참)일때만 해당 데이터를 모아준다.
+  -->
+
+  <!-- 
+    filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
+   -->
+<body>
+    <script>
+
+        const numbers = [0, 1, 2, 3, 4, 5]
+
+        const evenNumbers = numbers.filter(function(value){
+            console.log(value) /* 좌르르륵 돌리는지 확인하는 것. */
+            return value % 2 === 0 /* 이 결과가 `true`일때 리턴해준다. */
+            /* 현재는 짝수 구하는 방법이며, 짝수니까 return값으로 출력되고
+            그 값이 evenNumbers로 들어간다. */
+        })
+
+        console.log(`결과: ${evenNumbers}`);
+
+
+    </script>
+</body>
+</html>

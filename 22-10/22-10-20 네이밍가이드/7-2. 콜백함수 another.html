@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수 another</title>
+</head>
+<!-- 
+    • 콜백(Callback)함수  
+    • 매개변수로함수를전달한다
+    • forEach(), map(), filter() 함수
+
+    콜백 함수는 : 매개변수로 전달하는 함수
+    매개변수에 print를 입력하여 callThreeTimes의 매개변수는 함수가 되었다.
+ -->
+
+<body>
+    <script>
+
+        function callThreeTimes(callback) {
+            for(let i = 0; i < 3; i++) {
+                callback(i)
+            }
+        }
+
+        function print(i) {
+            console.log(`${i}번째 함수 호출`)
+        }
+
+        callThreeTimes(function(i){console.log(`${i}번째 함수 호출`)})
+        // 매개변수안에 함수명이 아니라 함수 자체를 적어도 됩니다.
+
+    </script>
+</body>
+</html>

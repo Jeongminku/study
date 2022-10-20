@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전개 연산자</title>
+</head>
+<body>
+    <!--
+         spread operator (전개 연산자)
+     -->
+     <script>
+        function sample(...items) {
+            console.log(items)
+        }
+
+
+        const array = [1, 2, 3, 4]
+        
+        console.log(`전개 연산자를 사용하지 않을 때: ${sample(array)}`)
+        /* 배열 안에  배열이 들어가있음 
+        [[1, 2, 3, 4]]
+        */
+
+
+        
+        console.log(`전개 연산자를 사용할 때: ${sample(...array)}`)
+        /* 배열 하나로 출력이 되어있음
+        [1, 2, 3, 4]
+        spread operator 전개 연산자를 사용하면
+        배열안에있는것을 숫자형으로 하나하나 뜯어낸다.  -> 1   2   3   4
+        그 이후 배열로 받는 rest parameter (... items)에 들어가므로
+        rest의 배열 안에 숫자형으로 들어가는 spread 이므로
+        rest 배열 열고[ s p r e a d  ]rest 배열 닫고
+        그래서 최종형태가 [1, 2, 3, 4] 가 된다.        
+        */
+     </script>
+</body>
+</html>

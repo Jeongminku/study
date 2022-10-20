@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구버전 매개변수 구하기</title>
+</head>
+<body>
+    <!--
+        참고 
+
+        arguments    매개변수를 배열로 받아온다 (rest parament와 비슷)
+        
+     -->
+     <script>
+        function sample() {
+            console.log(arguments)
+
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(`${i}번째: ${arguments[i]}`)
+            }
+        }
+
+        sample(1, 2)
+        sample(1, 2, 3)
+        sample(1, 2, 3, 4)
+
+
+     </script>
+</body>
+</html>
