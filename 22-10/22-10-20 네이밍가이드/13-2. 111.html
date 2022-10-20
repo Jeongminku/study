@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소드 체이닝</title>
+</head>
+<!-- 
+메소드 체이닝
+ -->
+<body>
+    <script>
+        let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        // let result = numbers.filter(function(value) {
+            // return value % 2 === 0 
+        // })
+
+
+
+        // 화살표 함수로 만들기
+        // let result = numbers.filter((value)=>{return value % 2 === 0 })
+        
+        // 위와 아래가 같은 식이다. ES6 화살표함수 생략하기
+        // let result = numbers.filter(value => value % 2 === 0)
+
+
+        // 생략순서
+        // let result = numbers.filter((value)=>{return value % 2 === 0 })
+        // ↓
+        // 화살표 함수는 : 리턴만 해주면 중괄호 & return을 생략 할 수 있다.
+        // let result = numbers.filter((value)=> value % 2 === 0 )
+        // ↓
+        // 화살표 함수의 매개변수가 1개밖에 없을때는 매개변수의 괄호를 생략 할 수 있다.
+        // let result = numbers.filter(value => value % 2 === 0 )
+        
+
+
+        console.log(result)
+    </script>
+
+</body>
+</html>
