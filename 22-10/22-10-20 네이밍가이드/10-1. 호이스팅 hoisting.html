@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호이스팅</title>
+  </head>
+<!-- 
+    익명함수와 비익명함수의 차이점
+
+    function test() { }   ---비 익명 함수   ====> 호이스팅 가능 (O)
+    var test = function() { }  ---- 익명 함수   ====> 호이스팅 불가능 (X) 
+ -->
+
+
+  <body>
+    <script>
+      a();
+
+      function a() {
+        document.write("haha");
+      }
+
+      b();
+
+      const b = function () {
+        document.write("baba");
+      };
+    </script>
+  </body>
+</html>

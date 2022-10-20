@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 변수 let -- 번외 : const는 어떨까 const도 let과 결과값은 같다.</title>
+</head>
+<body>
+<script>
+function logScope(){
+const local = 2;
+    if(local){
+        const local = '다른 값';
+        console.log('블럭안의 var:',local);
+    }
+    console.log('local',local)
+}
+logScope();
+</script>
+</body>
+</html>

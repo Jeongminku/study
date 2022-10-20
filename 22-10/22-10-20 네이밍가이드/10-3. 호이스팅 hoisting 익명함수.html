@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호이스팅</title>
+  </head>
+<!-- 
+    익명함수와 비익명함수의 차이점
+
+    function test() { }   ---비 익명 함수   ====> 호이스팅 가능 (O)
+    var test = function() { }  ---- 익명 함수   ====> 호이스팅 불가능 (X) 
+ -->
+
+
+  <body>
+    <script>
+      /* 비 익명 함수 
+      내가 정의하기전에 실행을 먼저 써도 가능하다.
+      
+      정석 : 정의 -> 실행
+       vs
+      호이스팅 : 실행 -> 정의
+      */
+      
+      
+      // a();
+
+      // function a() {
+      //   document.write("haha");
+      // }
+
+      
+      /* 익명함수
+      위에서부터 순서대로 써야함.
+
+      정석 : 정의 -> 실행    ====> 가능
+            정의 이후에 b(); 함수를 실행해야 정상작동함  
+      
+
+
+      호이스팅 : 실행 -> 정의 =====> 불가능
+            b();가 정의보다 위에있으면 오류가 발생.  
+       */
+      
+      b();
+
+      const b = function () {
+        document.write("baba");
+      };
+
+      // b(); <- 이거 주석 풀고 위에 b(); 를 주석처리하면 정상작동함
+    </script>
+  </body>
+</html>

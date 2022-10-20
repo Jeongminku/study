@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호이스팅</title>
+  </head>
+<!-- 
+    익명함수와 비익명함수의 차이점
+
+    function test() { }   ---비 익명 함수   ====> 호이스팅 가능 (O)
+    var test = function() { }  ---- 익명 함수   ====> 호이스팅 불가능 (X) 
+ -->
+
+
+  <body>
+    <script>
+      /* 비 익명 함수 
+      내가 정의하기전에 실행을 먼저 써도 가능하다.
+      
+      정석 : 정의 -> 실행
+       vs
+      호이스팅 : 실행 -> 정의
+      */
+      
+      
+      a();
+
+      function a() {
+        document.write("haha");
+      }
+
+      // b();
+
+      // const b = function () {
+      //   document.write("baba");
+      // };
+    </script>
+  </body>
+</html>

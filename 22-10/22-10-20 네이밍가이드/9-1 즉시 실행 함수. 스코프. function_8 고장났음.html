@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>함수가 망가졌음. 잘못된 수치인 100이 출력된다.</title>
+    <!-- 
+    즉시 실행 함수
+        • 함수를선언하자마자즉시실행
+        • 스코프와연관있다
+    -->
+    <script>
+      var num = 100;
+
+      // 라이언 개발자
+      function menu() {
+        num += 100;
+        alert(num);
+      }
+      menu();
+
+      // 어피치 개발자
+      function menu() {
+        alert(num);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
