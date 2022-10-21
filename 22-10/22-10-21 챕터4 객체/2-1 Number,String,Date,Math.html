@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number String Date Math</title>
+</head>
+
+<body>
+    <script>
+    //Number
+        //변수를 선언합니다.
+//                                 Number(`33`) /*문자형을 숫자형으로 만들어주던 친구 */
+        const f = new Number(273.365087)
+        console.log(f.toFixed(2)) /* 소수점 2자리까지만 보이게하고 나머지 반올림 */
+
+    //Date
+        const d = new Date()
+        console.log(d)
+        console.log(d.getDay())
+
+    //불 타입
+        const b = new Boolean(false)
+        console.log(b)
+
+
+    //String
+        const s = new String(`안녕하세요`)
+        console.log(s)
+
+        // let str = `제이름은`
+        // let s = new String(`제이름은`) 과 같다.
+
+        let str = "the, orange, test, haha"
+        
+
+        // const word = str.split(' '); /* 출력해보면 the, orange, test, haha 로 나뉘어져 있다 */
+        // const word = str.split(); /* 출력해보면 ['the orange gest haha']로 배열 통째로 들어가 있다.*/
+        // const word = str.split(''); /* [t, h, e, , o, r, a, n ... ] 처럼 한글자씩 나뉘며, 공백도 글자취급되어있다.*/
+        // const word = str.split(','); /* ,단위로 끊어줌 이때 
+        // let str = "the, orange, test, haha" 라고 적혀있어야 작동함 */
+
+        const word = str.split(',', 2); /* ,단위로 끊고 2개까지 보여주겠다 라는 뜻. */
+        
+        // split(separator 뭘 단위로 나눌것인가 , limit 몇개까지 보여줄것인가)
+        console.log(word)
+
+    //Number
+        let num = 1.325421;
+        // const num = new Number(1.325421) 과 같다.
+
+    
+    //불 타입 요약
+        let bool = false
+        //const b = new Boolean(false) 와 같다.
+        console.log(b)
+    
+        for (let i = 0; i < str.length; i++) {
+            console.log(str[i]),
+            console.log(num.toFixed(2))
+        }
+
+    </script>
+    
+</body>
+</html>

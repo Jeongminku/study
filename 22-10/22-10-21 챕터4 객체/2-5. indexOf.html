@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf(찾고싶은 문자열).</title>
+</head>
+<body>
+    <script>
+        let str = "      the, orange, test, haha      "
+        let str1 = "this"
+        let str2 = "apple dog food missle"
+
+        //indexOf(찾고싶은 문자열)  있으면 해당 인덱스 번호를 알려준다.
+        //없으면 -1을 보여준다.
+        //공백도 배열로 취급하니까 숫자 셀때 주의할것
+        //a = 0 / e = 4 / 공백 5 / d = 6
+        
+        const word = str2.indexOf(`i`);
+
+        if (word === -1) {
+            alert('찾는 문자가 없습니다.')
+        }
+
+        console.log(word)
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype 방식</title>
+</head>
+<!-- 
+    3. prototype 방식
+    메소드를 만들때
+
+    2번 : 생성자 방식 new -> 함수를 객체 안에 만듦.
+2번과 3번의 차이
+    3번 : prototype 방식 -> 함수를 객체 밖에 만듦.
+    // 객체명.prototype.함수명 = function(매개변수){ 코 드 작 성 }
+ -->
+<body>
+    <script>
+        //객체 = 속성 + 메소드
+        function Pet(nameVal, ageVal, spec) {
+            //속성을 정의합니다
+            this.name = nameVal;
+            this.age = ageVal;
+            this.spe = spec;
+        }
+
+
+        // 메소드를 function 밖에 만듧니다
+        // 객체명.prototype.함수명 = function(매개변수){ 코 드 작 성 }
+        Pet.prototype.eat = function(food){
+            console.log(`${this.name}이가 ${food}를 먹습니다.나이는 ${this.age}살 입니다.`)
+        }
+
+        Pet.prototype.agePrint = function(){
+            console.log(`${this.name}의 나이는 ${this.age}입니다.`)
+        }
+
+        Pet.prototype.spePrint = function(){
+            console.log(`${this.name}의 고양이는 ${this.spe}종 입니다.`)
+        } 
+
+        const pet = new Pet(`구름`, 7, `로봇고양이`)
+        const pet2 = new Pet(`달달`, 99, `검은 고양이`)
+        const pet3 = new Pet(`태양`, 52, `파란 고양이`)
+        const pet4 = new Pet(`별`, 14, `도라에몽`)
+
+
+        //함수실행
+        pet.eat(`밥`)
+        pet.agePrint()
+        pet.spePrint()
+        
+        pet3.spePrint()
+
+
+    </script>
+</body>
+</html>

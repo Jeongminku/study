@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new  객체생성자 함수 방식</title>
+</head>
+<!-- 
+    네이밍 생성 법칙 : 객체를 생성할때는 대문자로 시작하자.
+    function pet = 펫이라는 함수 만들기
+    function Pet = 객체 만들기
+
+    
+    ★객체 = 속성 + 메소드(함수)
+    2. 객체 생성자 방식
+    new.      
+ -->
+
+<body>
+    <script>
+        //Pet(name)의 nameVal은 매개변수   nameVal = 매개변수를 받아온것
+        //this.name 은 객체 내의 name만을 말한다.
+        function Pet(nameVal, age, spec) {
+            this.name = nameVal 
+            this.age = age
+            this.spec = spec
+            this.eat = function(food) {
+                console.log(`${this.name}가 ${food}을 ${this.age}년간 매일 먹었습니다.`)
+            }
+            this.agePrint = function() {
+                console.log(`${this.name}의 나이는 ${this.age}살 입니다.`)
+            }
+            this.spe = function() {
+            console.log(`${this.name}는 ${spec}종이면서 ${this.spec} 입니다.`)
+        }
+        }
+          //객체 생성
+          //객체를 쓰는 이유 : 코드의 생산성이 높아집니다.
+
+        //   객체가 생성되는 순간 속성에 값이 할당된다.
+        const pet = new Pet("구름", 5, `검은고양이`)
+        const pet2 = new Pet("별", 10, `무지개 고양이`)
+        const pet3 = new Pet("달", 7, `도라에몽`)
+        const pet4 = new Pet("태양", 99, `로봇 고양이`)         
+
+          //실행합니다  (pet은 변수 pet을 의미합니다.)
+        console.log(pet.name)
+        
+        pet.eat(`밥`)
+        pet2.eat(`밥`)
+        pet3.eat(`밥`)
+        pet4.eat(`밥`)
+
+        pet.agePrint()
+        pet2.agePrint()
+        pet3.agePrint()
+        pet4.agePrint()
+
+
+        pet.spe()
+        pet2.spe()
+        pet3.spe()
+        pet4.spe()
+
+    </script>
+</body>
+</html>

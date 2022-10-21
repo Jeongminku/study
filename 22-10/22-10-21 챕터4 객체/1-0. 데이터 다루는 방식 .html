@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열, 객체 데이터(JSON)
+
+        // 변수를 선언합니다
+        const product = {
+         // key: value,
+            name: '건조망고', /* , 빼먹지 않기. */
+            type: '당절임',
+            weight: 3,
+            arr: [`컴마빼먹지말기`,1,2,3]
+        }
+
+        console.log(product)
+
+        // 특정 데이터 보기 (객체.속성)
+        console.log(product.type)
+        console.log(product.name)
+
+        // 데이터 바꾸기
+        product.name = `바나나` /* name부분이 바나나로 바뀜 */
+        console.log(product)
+
+        
+
+        // 배열 꺼내오기 1
+        const result = product.arr
+        console.log(`result 안에있는 배열: ${result}`)
+        console.log(result[0])        
+
+
+
+        // 배열 꺼내오기 2
+        console.log(product.arr) // 배열 전체 꺼내오기
+        console.log(product.arr[0]) // 배열내 해당 인덱스 꺼내오기
+
+
+        // 나중에 추가 하는 방법
+        product.date = `2022/10/21 프로덕트에 데이터 추가`
+        console.log(product)
+
+
+        // 나중에 삭제 하는 방법
+        // delete 객체명.삭제할속성
+        delete product.weight
+        console.log(product)
+
+    </script>
+    
+</body>
+</html>

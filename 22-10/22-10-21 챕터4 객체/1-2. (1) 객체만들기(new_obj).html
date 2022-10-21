@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new  객체생성자 함수 방식</title>
+</head>
+<!-- 
+    네이밍 생성 법칙 : 객체를 생성할때는 대문자로 시작하자.
+    function pet = 펫이라는 함수 만들기
+    function Pet = 객체 만들기
+
+    
+    ★객체 = 속성 + 메소드(함수)
+    2. 객체 생성자 방식
+    new.      
+ -->
+
+<body>
+    <script>
+        // 객체를 정의합니다.
+        function Pet() {
+            //객체 내의 속성을 만듭니다.
+            this.name = `구름` /* Pet이라는 객체 안에있는 name 이라는 뜻을 나타내기 위해 this. 를 사용함. */
+            /* this: 현재 있는 객체를 가리킨다. */
+
+
+
+            //객체 내의 메소드를 만듭니다.    //food 자리는 매개변수입니다.
+            
+            this.eat = function(food) {
+                console.log(`구르미가 ${food}을 먹습니다.`)
+            }
+            
+        }
+
+          //객체를 생성합니다.    //변수명   =   new 객체명
+          // pet 이라는 변수에 Pet()이라는 객체를 넣어준것
+          // 객체 안에 있는것을 가져다 쓸 수 있게된다.
+
+          //객체를 쓰는 이유 : 코드의 생산성이 높아집니다. (여러개를 만들 수 있기 때문) => const pet2 = new Pet(); 등으로 만듦.
+        const pet = new Pet();
+        // const pet2 = new Pet();
+         
+
+          //실행합니다  (pet은 변수 pet을 의미합니다.)
+        console.log(pet.name)
+        pet.eat(`밥`)
+
+    </script>
+</body>
+</html>
