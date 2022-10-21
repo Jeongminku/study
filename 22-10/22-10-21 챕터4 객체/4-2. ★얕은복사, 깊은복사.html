@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>얕은복사 깊은복사</title>
+</head>
+<body>
+    <script>
+    //얕은 복사
+        // const obj1 = [`우유`, `식빵`]
+        // const obj2 = obj1   /* obj2에 아까 만든 obj1 배열을 그냥 넣었음. */
+        
+        // obj2.push(`고구마`)
+        // obj2.push(`토마토`)
+
+        // console.log(`obj1 출력값: `+ obj1)
+        // console.log(`obj2 출력값: `+ obj2)
+
+    /* 두개의 값이 같은 이유는 obj1값 하나를 두고 obj1과 obj2가 같은 값을 공유하고 있는 것 뿐이다. 
+    그렇기에 obj2값이 바뀌면 obj1값도 같이 바뀐 것. 
+    사실은 복사 한것이 아니라 같은 값을 보고있던 것. */
+
+
+
+//깊은 복사
+    // const obj1 = [`우유`, `식빵`]
+    //     const obj2 = [...obj1, `감자`]   /* `감자`를 쓰면 ...obj1 깊은복사 + 감자 데이터가 obj2가 된다. */
+        
+    //     obj2.push(`고구마`)
+    //     obj2.push(`토마토`)
+
+    //     console.log(`obj1 출력값: `+ obj1)
+    //     console.log(`obj2 출력값: `+ obj2)
+
+//객체값 깊은 복사
+        const product = {
+            name: `건조망고`,
+            type: `당절임`,
+            weight: 3,
+        }
+
+        const product2 = {
+            ...product
+        }
+
+        product2.date = "2022/10/21"
+
+        console.log(product);
+        console.log(`product2 출력값: ` + product2) /* Q. 왜 문자열로 출력이 되는가? */
+
+    </script>
+
+</body>
+</html>

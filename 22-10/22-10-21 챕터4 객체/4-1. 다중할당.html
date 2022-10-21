@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중 할당</title>
+</head>
+<body>
+    <script>
+        //배열 기반의 다중 할당
+        // a에는 1이들어가고 b에는 2가 들어간다.
+
+        let [a, b] = [1, 2]
+        console.log(a, b)
+
+        //객체 기반의 다중 할당
+        const product = {
+            name: `건조망고`,
+            type: `당절임`,
+            weight: 3,
+        }
+                                    // const product 내에서 { } 네임은 네임, 타입은 타입을 가져온다.(?)
+        const { name, type } = product
+        console.log(name, type)
+    </script>
+
+</body>
+</html>
