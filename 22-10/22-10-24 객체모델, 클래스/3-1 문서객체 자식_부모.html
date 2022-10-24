@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-1 문서객체자식_부모</title>
+</head>
+<body>
+    <div class="box">
+        <span class="inner">테스트용 스팬태그입니다</span>
+    </div>
+
+    <script>
+        const header = document.createElement('h1') 
+        const inner = document.querySelector(`.inner`)
+        
+        //parentNode :  부모 태그를 선택해 준다.
+        //inner.의 부모태그에 자식을 넣어준다 라는 뜻.
+        inner.parentNode.appendChild(header)
+        
+        
+        //다음에 오는 형제 태그를 찾아주는 nextSibling   // 이전형제 태그 : prevSibiling
+        console.log(inner.nextSibling.nextSibling)
+        //공백을 참조할지도모르니 nextSibling을 한번써서 안되면 2번써보자.        
+        inner.nextSibling.nextSibling.innerHTML = `<h1>nextSibling.innerHTML입니다</h1>`
+    </script>
+
+</body>
+</html>

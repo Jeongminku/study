@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 응용</title>
+    <style>
+        h1 {
+            /* 클릭을 여러번했을때 글자가 선택되는것을 방지함. */
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>
+    <button onclick="alertFunc()">click me</button>
+    <script>
+        const button = document.querySelector('button')
+
+
+    //이벤트를 만드는 방법
+        //3. 인라인 이벤트 모델
+        function alertFunc() {
+            alert("클릭 인라인!")
+        }
+    </script>
+    
+</body>
+</html>

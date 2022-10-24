@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인치 센치 변환기</title>
+</head>
+<body>
+    <input type="text">inch<br>
+    <button id="btn">계산</button>
+    <p></p>
+    <!-- value를 통해서 값을 가져 올 수 있었음. -->
+    <script>
+        const button = document.querySelector(`button`) //#btn 가능
+        const input = document.querySelector(`input`)
+        const p = document.querySelector(`p`)
+        button.addEventListener('click', function(){
+            const inch = Number(input.value) //input값의 value 를 가져옴. input창에 입력받는 값을 가져오는것.
+                                    // 문자열로 가져오므로 Number로 강제 형변환해야함.
+            
+            //숫자인지 문자인지 판단하겠습니다.
+            //NaN = 숫자가 아닙니다   |  isNaN 이거 NaN이냐? -> 숫자아니라면 true
+            if (isNaN(inch)){ //isNaN: 숫자가 아닌 값이라면 true
+                p.textContent ='숫자를 입력해주세요' 
+                return // return이 실행되면 아래있는 코드들은 실행하지않고 함수가 종료됩니다.
+                       // 함수 자체가 종료가 되므로 function () {    } 가 끝나버림.
+                       // return 이후에 있는 값들은 신경쓰지 않음. 함수를 바로 종료시킨다.
+            }
+
+
+
+
+
+
+            const cm = inch * 2.54 // cm 구하는 공식 : 인치 * 2.54
+            
+
+
+
+
+
+
+            //cm를 출력합니다.
+            p.textContent = `${cm}cm` //const cm의 cm 임. // 뒤의 cm은 단위
+        
+        })
+
+
+
+        
+    </script>
+
+</body>
+</html>

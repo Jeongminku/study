@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="txt" id="txt_h1">안녕하세요</h1>
+    <script>
+    
+    //방법 1
+
+
+        //document.querySelector(선택자) - 하나 가져옴
+        
+        //태그 선택자  h1 , 클래스 선택자  .txt   , 아이디 선택자등을 쓸수있음  #txt_h1
+        //문서에서 요소를 가져온다는 뜻.
+        const header = document.querySelector('h1') // 태그선택자
+        // const header = document.querySelector('.txt') // 클래스 선택자
+        // const header = document.querySelector('#txt_h1') // 아이디 선택자
+        console.log(header)
+
+        // 요소.style.css속성(---카멜표기법) = 'css속성값(---문자형으로)'
+        header.style.color ='red'
+        header.style.backgroundColor = 'black'
+        header.style.padding = '30px'
+
+        //CSS에서는 background-color  라는 케밥표기법이었지만
+        //DOM에서 쓰기위해서는 카멜표기법으로 쓴다.
+
+
+    </script>
+</body>
+</html>

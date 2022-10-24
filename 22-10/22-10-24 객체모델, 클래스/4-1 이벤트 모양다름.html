@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 어나더</title>
+    <style>
+        h1 {
+            /* 클릭을 여러번했을때 글자가 선택되는것을 방지함. */
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>클릭횟수 : 0</h1>
+    <script>
+        let counter = 0;
+        const h1 = document.querySelector('h1');
+
+        const listener = function(){
+            counter++;
+            h1.textContent = `클릭횟수: ${counter}`
+        }
+
+        h1.addEventListener('click', listener)
+
+
+        //removeEventListener('지우고싶은 이벤트명', 콜백 함수)
+        h1.removeEventListener('click', listener)
+    </script>
+</body>
+</html>

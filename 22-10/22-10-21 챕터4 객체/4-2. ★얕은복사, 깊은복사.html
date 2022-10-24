@@ -48,7 +48,8 @@
         product2.date = "2022/10/21"
 
         console.log(product);
-        console.log(`product2 출력값: ` + product2) /* Q. 왜 문자열로 출력이 되는가? */
+        console.log(product2)
+        console.log(`product2 출력값: ${JSON.stringify(product2)}`) /* 문자열이지만 object(객체) 안을 확인하는 방법 */
 
     </script>
 

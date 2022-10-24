@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text 조작</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+
+    <script>
+        const a = document.querySelector(`#a`)
+        const b = document.querySelector(`#b`)
+        
+        //textContent , innerHTML 모두 태그 사이에 넣어주는것임.
+        
+        //차이점
+        //textContent = 텍스트 형태로 태그 사이에 넣어준다. (문자만 그대로 넣음)
+        //innerHTML = 태그 형태로 태그 사이에 넣어준다 (HTML 속성을 반영하여 넣어준다.)
+
+        a.textContent = '<h1>testContent 속성</h1>'
+        b.innerHTML = '<h1>testContent 속성</h1>'
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyup</title>
+</head>
+<body>
+    <h1></h1>
+    <textarea></textarea>
+    <script>
+        const textarea = document.querySelector('textarea')
+        const h1 = document.querySelector('h1')
+
+        //keyup 키를 뗏을때 발생하는 이벤트
+        textarea.addEventListener('keyup',function(){
+            const length = textarea.value.length; //문자열의 길이를 가져온다
+            //value 는 textarea에 써있는 글자를 가져올 수 있음.
+            h1.textContent = `글자 수: ${length}`
+            
+        })
+
+        //keyup: 키보드에서 손을 뗄 때
+        //keypress: 키보드가 입력 되었을 때
+        //keydown: 키보드가 눌릴때
+
+        //keypress와 keydown은 아시아권 문자 입력을 제대로 받지 못하여 잘 안쓰임.
+        
+    </script>
+</body>
+</html>

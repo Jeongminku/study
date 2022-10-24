@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 응용</title>
+    <style>
+        h1 {
+            /* 클릭을 여러번했을때 글자가 선택되는것을 방지함. */
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>클릭횟수 : 0</h1>
+    <button id="connect">이벤트 연결</button>
+    <button id="disconnect">이벤트 제거</button>
+    <button id="reset">리셋</button>
+    <p>이벤트 연결 상태: 해제</p>
+    <p id="resetword"></p>
+    <script>
+        let counter = 0;
+        let isConnect = false // 현재 이벤트의 연결상태 판단하는 변수(이벤트가 제거된 상태인지 아닌지)
+        
+        const h1 = document.querySelector('h1');
+        const p = document.querySelector('p')
+        const conButton = document.querySelector('#connect')
+        const disconButton = document.querySelector('#disconnect')
+        const resetButton = document.querySelector(`#reset`)
+        const p2 = document.querySelector('#resetword')
+
+        const listener = function(){
+            counter++;
+            h1.textContent = `클릭횟수: ${counter}`
+            p2.textContent = ''
+        }
+
+        
+
+        conButton.addEventListener('click', function(){
+            if (isConnect === false) { //이벤트가 연결이 안된 상태인지 판단
+                h1.addEventListener('click', listener) //h1 이벤트 추가(addEventListener)
+                p.textContent ='이벤트 연결 상태: 연결'
+                isConnect = true
+                
+            }
+            p2.textContent = ''
+        })
+
+
+        disconButton.addEventListener('click', function(){
+            if (isConnect === true) { //이벤트가 연결이 된 상태인지 판단
+                h1.removeEventListener('click', listener) //h1 이벤트 제거(removeEventListener)
+                p.textContent ='이벤트 연결 상태: 해제'
+                isConnect = false
+           }
+           p2.textContent = ''
+        })
+
+        resetButton.addEventListener('click', function(){
+            counter = 0;
+            h1.textContent = `클릭횟수: ${counter}`
+            p2.textContent = `클릭 횟수값이 초기화되었습니다.`
+        })
+    </script>
+</body>
+</html>

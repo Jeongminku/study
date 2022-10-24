@@ -1,0 +1,40 @@
+1. 문서 객체 모델(DOM)
+• Document Object Model
+• HTML 문서에접근하기위한인터페이스(interface)
+• DOM TREE
+
+
+
+• 기본DOM
+    • 페이지로드
+        • DOMContentLoaded
+    • 요소선택
+        • querySelector, querySelectorAll
+    • getElementById, getElementByClassName
+    • 글자조작
+        • textContent, innerHTML
+    • 속성조작
+        • setAttribute, getAttribute
+    • 스타일조작
+        • style
+    • 태그조작
+        • createElement, appendChild, removeChild
+    • 이벤트
+        • addEventListener
+        • removeEventListener
+
+
+
+• DOM API
+    • https://www.w3schools.com/jsref/dom_obj_document.asp
+    • https://developer.mozilla.org/ko/docs/Web/API/Document
+
+
+
+
+브라우저객체모델(BOM)
+• BOM이란?
+    • Browser Object Model
+    • 객체브라우저에내장된객체
+
+• 계층구조

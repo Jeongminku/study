@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 응용</title>
+    <style>
+        h1 {
+            /* 클릭을 여러번했을때 글자가 선택되는것을 방지함. */
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>
+    <button>click me</button>
+    <script>
+        const button = document.querySelector('button')
+
+
+    //이벤트를 만드는 방법
+        // 1. 표준 이벤트 모델
+        // button.addEventListener('click', function(){
+        //     alert('표준 이벤트 모델 클릭! test')
+        // })
+
+
+        // 2. 고전 이벤트 모델
+        // onclick을 통해서 click 이벤트를 한다고 처음부터 정의함.
+        document.body.onclick = function() {
+            alert('고전 이벤트 모델 클릭! test')
+        }
+
+    </script>
+    
+</body>
+</html>

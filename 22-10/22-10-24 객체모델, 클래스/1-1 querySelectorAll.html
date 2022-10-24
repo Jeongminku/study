@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+<body>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+
+    <script>
+        // document.querySelectorAll('선택자')   -> 해당 요소를 모두 가져온다.
+        
+        const headers = document.querySelectorAll('.txt');
+        console.log(headers);
+
+    //방법2 
+
+        // for (let i = 0; i  < headers.length; i++){
+        //     headers[i].style.color = 'hotpink'
+        //     headers[i].style.backgroundColor = 'black'
+        //     console.log(headers[i])
+        // }
+
+
+    //방법3
+    
+        // headers.forEach(function(header){
+        //     header.style.color = 'hotpink'
+        //     header.style.backgroundColor = 'black'
+        // });
+
+        
+    </script>
+</body>
+</html>
