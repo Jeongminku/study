@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자입력 + selectbox</title>
+</head>
+<body>
+    <input type="text"> cm =
+    <span></span> <!-- span태그 사이에 숫자가 들어가야함. -->
+    <select>
+      <option value="10">mm</option>
+      <option value="0.01">m</option>
+      <option value="0.393701">inch</option>
+
+    <script>
+
+        let currentVal; //현재 값
+        let transVal = 10; //변환된 값
+
+        const input = document.querySelector(`input`)  //쿼리 셀렉터(` `) 안에 백틱 or '' 체크하기.
+        const select = document.querySelector(`select`)
+        const span = document.querySelector(`span`)
+        
+        
+
+
+        //계산을 해주는 함수. (input으로 입력받아온 값에서 쓸 함수.)
+        //계산 결과를 보여준다. 
+        function calculate() {
+            span.textContent = (currentVal * transVal).toFixed(2)  //toFixed(2) 소수점 2자리 까지만 출력함.
+        }
+
+        //받아오는 이벤트값 필요. (keyup 으로 작성할것.)  , 입력받은 값을 가져온다 => 계산을 한다
+        input.addEventListener('keyup', function(e){
+            currentVal = e.currentTarget.value
+            calculate()
+        })
+
+
+        //selectbox가 change되면 그 값을 받아와야함.
+
+        select.addEventListener('change', function(e){
+            const options = e.currentTarget.options // 현재 타겟이 된 옵션
+            const index = options.selectedIndex //선택한 값의 인덱스 번호를 가져옴.
+            console.log(index)
+            transVal = options[index].value // 선택한 selectbox의 value값을 가져옴.
+            calculate()
+        })
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio</title>
+</head>
+<!-- 라디오버튼을 클릭하면 hr밑으로 사진이 나오도록 하는걸 만들어볼것. -->
+<body>
+    <h3>좋아하는 동물 선택</h3>
+    <input type="radio" name = "pet" value="강아지">
+    <span>강아지</span>
+
+    <input type="radio" name = "pet" value="고양이">
+    <span>고양이</span>
+
+    <input type="radio" name = "pet" value="햄스터">
+    <span>햄스터</span>
+
+    <input type="radio" name = "pet" value="기타">
+    <span>기타</span>
+    <hr>
+    <h3 id="output"></h3>
+    <hr>
+    <input type="checkbox">
+    <h2 id="chk_output"></h2>
+
+    <script>
+    //1. 라디오 이벤트
+        // const output = document.querySelector(`#output`)
+        // const radios = document.querySelectorAll(`[name=pet]`)
+        
+        // radios.forEach(function(radio){
+        //     radio.addEventListener('change', function(e){ 
+        //         const current = e.currentTarget;
+        //         if (current.checked){ 
+        //             output.textContent = `${current.value}`
+        //         }
+
+        //     })
+        // })
+
+
+
+
+    //currentTarget 현재 타게팅이 된.
+
+    //2. 체크 이벤트   
+        const chk_output = document.querySelector(`#chk_output`);
+        const checkbox = document.querySelector('[type=checkbox]');
+        
+
+        checkbox.addEventListener('change', function(e){
+            if (e.currentTarget.checked) {
+                chk_output.textContent = `체크되었습니다!`
+            } else {
+                chk_output.textContent = `` //` 비워두면 공백. ` 
+
+            }
+        })
+
+    </script>
+</body>
+</html>
