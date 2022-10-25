@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속</title>
+</head>
+<!-- 
+    상속 
+        • 자식은 부모것을 가져다쓴다.
+        • B클래스는 A클래스에있는 속성과 메소드를 상속받아 사용한다.   (A클래스 : 부모 <------ B클래스 : 자식)
+        • super()로 부모의 생성자 함수를호출한다.
+ -->
+
+<body>
+    <script>
+        class Rectangle {
+            //객체 = 속성 + 메소드
+            //생성자 함수를 설정
+            
+            //속성
+            constructor (width, height){ //constructor 안에있는 width 가 this.width = "여 width 기" 들어감.
+                this.width = width
+                this.height = height
+            }
+
+            //메소드
+            //1. 사각형의 둘레 구하기
+            getPerimeter () {
+                return 2 * (this.width + this.height)  //둘레 공식
+            }
+
+            //2. 사각형의 넓이 구하기
+            getArea () {
+                return this.width * this.height //넓이 공식
+            }
+        }
+
+
+        //부모와 자식간을 이어주는 extends
+
+        class Square extends Rectangle { //Rectangle 클래스(부모) 로부터 Square클래스(자식)를 만듭니다. 
+            constructor(length, length2) {
+                console.log(length, length2)
+                super(length, length2) //super: 부모의 생성자 함수를 호출합니다.    constructor () {}를 호출함.
+                //super가 실행되는 순간 얘의 부모인 Rectangle의 constructor를 실행함.
+                //constructor의 width 10, height 20의 값을 주게 됨.
+            }
+        }
+
+
+        //Rectangle의 rect       const rect = new Rectangle(width, height)
+        // const rect = new Rectangle(10, 20)  //생성자함수에 값을 넣음.
+        // console.log(rect);
+        // console.log(rect.getPerimeter()) //사각형 둘레를 구하기 위해 getPerimeter()를 사용함.
+        // console.log(rect.getArea()) //사각형 둘레를 구하기 위해 getArea()를 사용함.
+
+        const square = new Square(1,3)
+        //59번이 생성이 될때 43번으로 가고 46번 super가 실행되면서 23번으로 간다.
+
+        //자식 클래스는 부모 클래스에 있는 속성과 메소드를 쓸 수 있다.
+        console.log(square.getPerimeter()) //getPerimeter는 square의 부모클래스인 Rectangle에 있던 메소드 인데 쓸수있게된것.
+        console.log(square.getArea()) //getArea는 square의 부모클래스인 Rectangle에 있던 메소드 인데 쓸수있게된것.
+        console.log(square.width)
+
+
+    </script>
+</body>
+</html>

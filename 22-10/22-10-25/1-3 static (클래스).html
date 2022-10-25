@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //속성 + 메소드
+        class Pet {
+            //static 속성 (= 정적 속성)
+            static color = 'black' 
+
+            constructor(nameVal, ageVal, speVal){
+                //속성
+                this.name = nameVal;
+                this.age = ageVal;
+                this.spe = speVal;
+            }
+            //메소드(함수)
+            eat (food) {
+            console.log(`${this.name} 이가 ${food}를 먹습니다`)
+            }
+
+            //나이 출력 함수
+            agePrint(){
+                console.log(`${this.name}이는 ${this.age}살짜리 고양이입니다.`)
+            }
+
+            //종 출력 함수
+            spePrint(){
+                console.log(`${this.name}이는 ${this.spe}라는 종입니다`)
+            }
+
+            static colorPrint () {// static메소드 = 정적 메소드
+                console.log(`이름은 ${this.color} 입니다`)
+            }
+        }
+
+        function colorPrint() {
+            console.log(`${Pet.color}`)
+        }
+    //정적 함수 실행시킬때는 42번, 43번에서 하는 인스턴스 생성이 필요가 없음.        
+        // const pet = new Pet("구름", 7, `로봇고양이`);
+        // const pet2 = new Pet("태양", 22, `항성고양이`);
+
+        console.log(Pet.color) //Pet.color 값 확인하기 위해 찍은것.
+        console.log(Pet.colorPrint()) //정적 속성은   클래스명.속성  | 정적 메소드는  클래스명.메소드()  로 바로 쓸 수 있다.
+
+        
+        // pet.eat('매개변수값 입력 통조림')
+        // pet.agePrint()
+        // pet.spePrint()
+
+        // pet2.eat(`달`)
+        // pet2.agePrint()
+        // pet2.spePrint()
+
+
+
+    </script>
+</body>
+</html>
