@@ -142,8 +142,8 @@ function fullnameConfirm() {
 
 
 function emailConfirm() {
-    const mustEmail = document.querySelector(".must_email")
-
+    const mustEmail = document.querySelector(".must_email");
+    const regEmail = document.querySelector(".reg_email");
     regEmail.style.display = "none"
 
     if (!email.value.replace(/ /g,"")) {
