@@ -3,6 +3,7 @@
 
 .wrap{
 	background: wheat;
+	padding-top: 60px;
 }
 
 section .con {
@@ -11,12 +12,53 @@ section .con {
 	height: 100%;
 }
 
-.slider{
+/* .slider{
 	height: 480px;
-}
+} */
 
 .slider__content {
 	background: thistle;
+}
+
+.slider__content .mySwiper {
+	width: 100%;
+	height: 600px;
+}
+
+.slider__content .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+  }
+
+.slider__content .swiper-slide.slide1 {
+	background: url(../img/slide1_S.png);
+	background-size: cover;
+	background-position: center;
+}
+.slider__content .swiper-slide.slide2 {
+	background: url(../img/slide2_S.png);
+	background-size: cover;
+	background-position: center;
+}
+.slider__content .swiper-slide.slide3 {
+	background: url(../img/slide3_S.png);
+	background-size: cover;
+	background-position: center;
 }
 
 .youtube{
@@ -32,18 +74,50 @@ section .con {
 }
 
 .sns__content {
-	background: turquoise;
+	background: #683a2f;
 }
-
-.sns__content > ul {
+/* 모바일 sns */
+.content__list {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row; /* 디폴트값이 row */
+	height: 100%; /* sns가 160px 이므로 100% 꽉 차면 160px가 됩니다. */
 }
 
-.sns__content > ul > li {
-	flex: 1;
+.content__list > li > a > .icon{
+	padding-right: 0px;
+	font-size: 3rem;
+}
+
+.content__list > li > a > .sns-txt {
 	text-align: center;
 }
+
+.content__list > li > a > .sns-txt > span:nth-of-type(2) { /* 버튼부분 꾸미기 */
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 0.8em;
+	font-weight: bold;	
+	display: inline-block;
+}
+
+.content__list > li {
+	flex: 1; /* width 를 1:1:1 로 비율 잡는것 */
+	text-align: center;
+}
+
+.content__list > li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* 가운데로 박음 */
+	height: 100%;
+	width: 100%;
+	color: white;
+}
+
+.content__list > li > a > div > span {
+	display: block;
+}
+
 
 .guide{
 	height: 480px;
@@ -51,10 +125,9 @@ section .con {
 
 .guide__content {
 	display: flex;
-	/* flex-direction: row; */
 	flex-direction: column;
-	/* background: yellowgreen; */
 }
+
 
 .guide__content > div {
 	flex: 1;
@@ -62,19 +135,51 @@ section .con {
 }
 
 .guide__content > .content__app {
-	background: hotpink;
+	background-color: #C7A086;
+	background-image: url(../img/app.png);
+	background-size: cover;
+	background-position:center;
 }
 
 .guide__content > .content__delivery {
-	background:indianred;
+	background-color: #b38567;
+	background-image: url(../img/delivery.png);
+	background-size: cover;
+	background-position:center;
 }
 
 .store{
-	height: 597px;
+	height: 370px;
 }
 
 .store__content {
-	background: honeydew;
+	background: white;
+}
+
+.store__content > .search {
+	padding: 50px 5px;
+}
+
+.store__content > .search .button { /* 매장찾기 버튼 동글동글 */
+	border-radius: 30px;
+	margin-top: 15px;
+	font-size: 1em;	
+}
+
+.store__content > .search > h2, .store__content > .search > p {
+	text-align: center;
+}
+
+.store__content > .search > h2 {
+	font-size: 2rem;
+}
+
+.store__content > .search > p:nth-of-type(1) {
+	font-size: 1.5rem;
+}
+
+.store__content > .search > p:nth-of-type(2) {
+	margin-bottom: 30px;
 }
 
 .store__content ul {
@@ -93,16 +198,46 @@ section .con {
 	text-align: center;
 }
 
+.store__content > .search > ul li > img {/* 이미지 아이콘 크기 조절 */
+	display: block;
+	width: 60px;
+	margin: 0 auto;
+}
+.store__content > .search > ul li > .search-txt {
+	display: none;
+}
+
+.store__content > .search > ul li > em {
+	color: red;
+}
 .banner{
 	height: 200px;
 }
 
 .banner__content {
-	background: gray;
+	background-image: url(../img/bg_home_cs.png);
+	background-size: cover;
+	background-position:center;
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+.banner__content > .order-text {
+	padding: 40px 30px 10px;
+}
+
+.banner__content > .phone{
+	font-size: 2.5rem;
+	padding-left: 30px;
 }
 
 /* 테블릿: 767px 이상*/
 @media all and (min-width:767px){
+	.wrap {
+		padding-top: 120px;
+	}
+
 	.guide__content {
 		flex-direction: row;
 	}
@@ -110,9 +245,122 @@ section .con {
 	.store__content ul li {
 		width: 16.66%;
 	}
+
+	.slider__content .mySwiper {
+		width: 100%;
+		height: 380px;
+	}
+
+	.slider__content .swiper-slide.slide1 {
+		background: url(../img/slide1.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.slider__content .swiper-slide.slide2 {
+		background: url(../img/slide2.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.slider__content .swiper-slide.slide3 {
+		background: url(../img/slide3.png);
+		background-size: cover;
+		background-position: center;
+	}
+
+	.content__list > li > a {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.content__list > li > a > .icon{
+		font-size: 5rem;
+		padding-right: 10px;
+	}
+
+	.store{
+		height: 597px;
+	}
+
+	.store__content > .search {
+		padding: 140px 5px;
+	
+	}
+
+	.store__content > .search > h2 {
+		font-size: 3rem;
+		margin-bottom: 20px;
+	}
+
+	.store__content > .search > ul li {
+		width: 16.45%; /*100/6 으로 6칸 알아서 나눈것 */
+		border-right: 1px solid rgb(209, 209, 209);
+	}
+
+	.store__content > .search > ul li:last-child { /* 주차장 칸 오른쪽에 선 하나 없애기 위함. */
+		border-right: none;
+	}
+
+	.store__content > .search > ul {
+		width: 79.44%;
+		margin: 0 auto;
+	}
+
+	.store__content > .search > ul li > img { /* 이미지 사이즈 */
+		width: 90px;
+	}
+
+	.store__content > .search > ul li > .search-txt {
+		display: block;
+		margin: 15px 0;
+	}
+
+	.store__content > .search > ul li > em {
+		font-size: 1.4rem;
+
+	}
+
+	.banner__content {
+		flex-direction: row;
+	}
+
+	.banner__content > .order-text {/* 집에서 만나는 버거킹 */
+		width: 55.26%; /* 반응형 비율계산 = 630px(내가 고정할 사이즈) /  1140px(전체 사이즈) = 55.26% */
+
+		padding: 0 0 0 4.38%; /* 50px로 유지하고싶음 / 1140px(전체사이즈) = 4.38% */
+	}
+
+	.banner__content > .order-text > h1 {
+		font-size: 2.3rem;
+		padding-top: 60px;
+	}
+
+	.banner__content > .order-text > p {
+		font-size: 1.3rem;
+		display: inline;
+	}
+
+	.banner__content > .order-text > p:nth-of-type(2):before {
+		content: '/ ';
+	}
+
+	.banner__content > .phone {
+		/* 410px ÷ 1140px */
+		width: 36.96%;
+		/* 50px ÷ 1140px */
+		padding-right: 4.38% ;
+		padding-top: 75px;
+		text-align: center;
+	}
+
 }
 
-/* pc: 1024px 이상 */
-@media all and (min-width:1024px){ 
 
+
+
+
+/* pc: 1024px 이상 */
+@media all and (min-width:1024px){
+	.slider__content .mySwiper {
+		height: 480px;
+	}
 }

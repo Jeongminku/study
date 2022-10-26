@@ -318,7 +318,7 @@
 		flex-direction: row;
 		justify-content:space-between;
 		max-width: 1140px;
-		margin: 0 auto;
+		margin: 60px auto 0;
 		padding: 35px 30px;
 		border-bottom: 1px solid;
 	}
