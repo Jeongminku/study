@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 기본 선택자 1-2</title>
+</head>
+<body>
+    <ul id = "wrap">
+        <li id="list_1">리스트1 부대찌개
+            <span class="child">부대찌개의 자식인 라면사리</span>
+            <span class="child2">부찌 자식 햄사리</span>
+            <span>부찌 자식 우동사리</span>
+
+        </li>
+        <li id="list_2">리스트2 김치찌개</li>
+        <li id="list_3">리스트3 된장찌개</li>
+    </ul>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- jquery 사용을 위해 가장 먼저 하는 것 (준비 완료). -->
+    <script>
+        /* Jquery 기본 폼: $(function(){}) */
+        $(function(){
+            // $('#list_1').parent().css("border", "1px solid red")  //list_1의.부모 에 css 주는것 = ul에 주는것.
+            // $('#list_1').children().css("border", "2px solid green")  //list_1의.자식 에 css 주는것 = list2와 list3에 주는것.
+            // $('#list_1').children('.child').css("border", "2px solid orange")  //list_1의.자식 중에 .child에만 css 주는것 = list2와 list3에 주는것.
+            // $('#list_1').siblings().css("border", "2px solid blue")  //list_1의.형제 에 css 주는것 = list2와 list3에 주는것.
+            $('.child2').prev().css("border", "1px solid red") //child2보다 앞선 놈 (라면사리)
+            $('.child2').next().css("border", "1px solid red") //child2 다음놈 (우동사리)
+            
+            // $('.child2').siblings().css("border", "1px solid yellow") //child2의 형제놈들 (라면사리, 우동사리)
+            
+        })
+
+    </script>
+</body>
+</html>
+

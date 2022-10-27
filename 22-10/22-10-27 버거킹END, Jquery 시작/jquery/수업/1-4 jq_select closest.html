@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 기본 선택자 1-4</title>
+</head>
+<body>
+    <ul class = "list_1">
+        <li class="list_1">리스트1 부대찌개
+            <span class="child1">1번 라면사리</span>
+            <span >2번</span>
+            <span class="child3">3번 햄사리</span>
+            <span >4번</span>
+            <span class="child5">5번 우동사리</span>
+
+        </li>
+        <li id="list_2">리스트2 김치찌개</li>
+        <li id="list_3">리스트3 된장찌개</li>
+    </ul>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- jquery 사용을 위해 가장 먼저 하는 것 (준비 완료). -->
+    <script>
+        /* Jquery 기본 폼: $(function(){}) */
+        $(function(){
+            $(".child3").closest('.list_1').css("border", "1px solid red") //가장 가까운 상위를 선택함 closest
+            //만약, 가장 위인 ul이 선택되었다면 빨간테두리가 리스트 전체를 감쌌을것
+        })
+
+    </script>
+</body>
+</html>
+
