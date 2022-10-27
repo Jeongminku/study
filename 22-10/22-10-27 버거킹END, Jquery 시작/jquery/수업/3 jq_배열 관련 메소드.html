@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 배열 관련 메소드</title>
+</head>
+<body>
+    <ul class = "wrap">
+        <li class="list_1">리스트1</li>
+        <li class="list_2">리스트2</li>
+        <li class="list_3">리스트3</li>
+    </ul>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- jquery 사용을 위해 가장 먼저 하는 것 (준비 완료). -->
+    <script>
+        /* Jquery 기본 폼: $(function(){}) */
+        
+        $(function(){
+            var obj = [
+                {
+                    area: "서울",
+                    name: "라이언"
+                },{
+                    area: "인천",
+                    name: "어피치"
+
+                },{
+                    area: "부산",
+                    name: "죠르디"
+                }
+            ]
+            
+                var idxNum = $('li').index($('.list_2')) /* 해당 인덱스 번호 출력 */ //$(찾고싶은것).index($해당하는 선택자 입력)
+                console.log(idxNum)
+
+
+
+
+
+            // var names = ["김부장", "정부장", "이부장"]
+            
+            // //inArray("찾고싶은내용", 변수명)
+            // var idxNum = $.inArray("정부장", names)
+            // console.log(idxNum)
+            // console.log($.isArray(names)) //isArray: 배열인지 아닌지 판단해줌(여기서는 names 가 배열인지 아닌지 판단하였음.)
+
+
+            // var arr2 = $.grep(obj, function(val, idx){
+            //     if (val.area === "서울") {
+            //         return true
+            //     } else {
+            //         return false
+            //     }
+            // })
+
+
+
+
+
+            // var arr1 = $.map(obj, function(val,idx){
+            //     if (val.area === "서울"){
+            //         return val
+            //     }
+            // })
+
+            // console.log(arr1)
+
+            // $(obj).each(function(idx, val){
+            //     console.log(idx, val)
+            // })
+
+            // $(`.list li`).each(function(idx, val){
+            //     console.log(idx, val)
+            // })
+
+        })
+            </script>
+</body>
+</html>
