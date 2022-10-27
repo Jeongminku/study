@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콘텐츠 탐색 선택자</title>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner1">
+            <h1></h1>
+            <p class="test"><span>내용1</span></p>
+            <p><span>내용2</span></p>
+            <p><span>내용3</span></p>
+
+        </section>
+        <section id="inner2">
+            <h1></h1>
+            <p><span>내용4</span></p>
+            <p><span>내용5</span></p>
+            <p class="test2" style="display: block"><span>내용6</span></p>
+        </section>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            // $("#inner1 p:contains(내용1)").css({"background-color":"blue"}) //내용1을 포함하는애들만 // 내용 1에만 파란줄
+            // $("#inner1 p:has(span)").css({"background-color":"red"}) //span을 가진놈들만 // 내용1,내용2,내용3에 파란줄
+            // $("#outer_wrap").contents().css({"background-color":"red"}) //.contents // 모든 컨텐츠를 잡음 
+            // $("#inner2 p").not(":first").css({"background-color":"red"}) //이너2 p 중에서 first를 not(빼고) .css를 주세요
+            
+            // $("#inner1").find('.test').css({"background-color":"red"}) //#inner1중에 test가 들은녀석을 찾아서 css를 주세요
+
+            console.log($('.test2').is(":visible")) //is : ~하냐  // is(":visible") : 보이냐?
+        })
+    </script>
+</body>
+</html>

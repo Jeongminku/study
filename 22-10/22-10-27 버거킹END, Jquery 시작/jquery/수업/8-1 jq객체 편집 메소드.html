@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 8-1 jq객체 편집 메소드</title>
+</head>
+<body>
+    <div id="wrap">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+    <div id="wrap2">
+        <h1>제목</h1>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+        //after와 before
+            // $("#wrap p:eq(2)").after("<p>After</p>") //2번 인덱스 after(이후)에 "<p>After</p>"를 적용한다
+            // $("#wrap p:eq(1)").before("<p>Before</p>") //1번 인덱스 before(전)에 "<p>Before</p>"를 적용한다
+        
+        
+
+        //insertAfter 와 insertBefore
+            // $("<p>인서트After</p>").insertAfter("#wrap p:eq(2)") //2번 인덱스 after(이후)에 "<p>After</p>"를 적용한다
+            // $("<p>인서트Before</p>").insertBefore("#wrap p:eq(1)") //1번 인덱스 before(전)에 "<p>Before</p>"를 적용한다
+
+
+
+
+
+        //append 와 prepend
+            // $("#wrap").append("<p>어펜드 내용4</p>") //append : 내가 선택한 요소에서 하위태그에서 맨 뒤에다가 갖다붙인다
+            // $("#wrap").prepend("<p>프리펜드 내용0</p>") //prepend : 내가 선택한 요소에서 하위태그에서 가장 앞에다가 갖다 붙인다.
+
+
+
+        //appendTo 와 prependTo
+            // $("<p>appendTo 내용4</p>").appendTo("#wrap") //appendTo : 내가 선택한 요소에서 하위태그에서 맨 뒤에다가 갖다붙인다
+            // $("<p>prependTo 내용0</p>").prependTo("#wrap") //prependTo : 내가 선택한 요소에서 하위태그에서 가장 앞에다가 갖다 붙인다.
+
+        
+        
+        //복제?
+            // var copy = $('#wrap').children().clone() 
+            // $('#wrap').append(copy)
+
+
+        //remove() 통째제거와 empty() 하위요소 제거 
+            // $("#wrap").remove() //통째로 제거
+            // $("#wrap").empty() //하위 요소만 제거
+
+        
+        //replaceWith:    A replaceWith B   A를 B로 바꿈
+            $("h1").replaceWith("<h3>h3으로 바꿨음</h3>") //기존에 있던 [h1이 -> h3]으로 + [제목 -> h3으로바꿨음] 으로바뀜 
+            
+
+        //replaceAll
+        $("<h3>h3으로 바꿨음</h3>").replaceAll("h1") // 기존에있던 h1을 h3으로 바꿈 (위와 결과는 동일, 식의 구성만 반대)
+
+
+
+
+
+        
+        })
+    </script>
+</body>
+</html>
+

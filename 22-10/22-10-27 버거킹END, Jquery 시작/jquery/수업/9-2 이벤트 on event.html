@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 9 on 이벤트</title>
+</head>
+<body>
+    <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.btn1').click(function(){
+                $('.btn1').parent().next().css({"color":"red"})
+            })
+
+            $('.btn2').on({
+                //키 : value
+                "mouseover focus":function(){
+                    $('.btn2').parent().next().css({"color":"blue"})
+                },
+                "mouseout blur" : function(){
+                    $('.btn2').parent().next().css({"color":"black"})
+                }
+            })
+
+        })  
+    </script>
+</body>
+</html>
+<!--         
+$(“이벤트대상”).on(“이벤트종류1이벤트종류2 …”,
+function(){
+자바스크립트코드;
+});
+
+
+$(“이벤트대상”).on({”이벤트종류1이벤트종류2 …:
+function() {
+자바스크립트코드;
+}”});
+
+
+$(“이벤트대상”).on({
+”이벤트종류1” :function() {자바스크립트코드; },
+”이벤트종류2” :function() {자바스크립트코드; },
+”이벤트종류3” :function() {자바스크립트코드; },
+);
+-->

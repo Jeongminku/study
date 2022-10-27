@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 9 라이브이벤트</title>
+</head>
+<body>
+    <div id = "wrap">
+        <p>
+            <button class="btn1">버튼1</button>
+        </p>
+        <p class="btn_test">
+            <button class="btn2">버튼2</button>
+        </p>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            
+            $(".btn1.on").on("mouseover focus", function(){
+                alert("버튼 1에 마우스 올림")
+            })
+
+            $('.btn1').addClass("on") //on 이라는클래스 추가함.  on클래스가 마우스올림 보다 늦게 발생하므로 위에있는 식이 제대로 작동안하게되므로 순서 주의.(동적요소)
+            //위와 같이 실행이 안되는걸 실행하게 하기 위해서는
+            //라이브 이벤트 방식을 사용해야 한다.
+
+
+            //라이브 이벤트 방식
+
+            $(".btn_test").on("mouseover focus", ".btn2.on", function(){
+                alert("버튼2에 마우스 올림")
+            })
+
+            $('.btn2').addClass("on")
+        })  
+    </script>
+</body>
+</html>
+<!--   
+
+라이브 이벤트
+
+
+$(“document | “이벤트대상의상위요소”).on(“이벤트종류”, “이벤트대상선택”,
+function() {
+자바스크립트코드;
+});
+-->

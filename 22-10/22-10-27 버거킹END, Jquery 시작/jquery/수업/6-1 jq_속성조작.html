@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 기본 선택자 1-1</title>
+    <style>
+        .aqua {background-color: aqua;}
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .yellow {background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div>
+        <ul class = "list_1">
+            <li class="list_1">리스트1 
+                <span class="child1">1번</span>
+                <span >2번</span>
+                <span class="child3">3번</span>
+                <span >4번</span>
+                <span class="child5">5번</span>
+
+            </li>
+            <li id="list_2">리스트2 김치찌개</li>
+            <li id="list_3">리스트3 된장찌개</li>
+        </ul>
+        <a href="http://www.naver.com" target="_blank">네이버클릭</a>
+        <p>안녕하세요. 안녕하세요2.</p>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- jquery 사용을 위해 가장 먼저 하는 것 (준비 완료). -->
+    <script>
+        $(function(){
+
+            //순수 자바스크립트에서는 innerHTML과 비슷하다.
+
+            // var result1 = $(".list_1").html(); //html은 태그포함해서 싹 가져온다
+            // console.log(result1);
+            // $(".list_1").html("<a href='#'>클릭</a>");
+
+
+
+
+
+            // var result1 = $(".list_1").text(); //태그는 쏙 빼고 문자열(텍스트)만 가져온다
+            // console.log(result1);
+            // $(".list_1").text("<a href='#'>클릭</a>");
+
+
+
+            //attr: 선택한 요소의 지정한 속성값을 가져옵니다.
+            //attr의 href속성의 값인 http://www.naver.com 이 나옵니다.
+            // console.log($("a").attr("href"))
+            // console.log($("a").attr("target")) //타겟속성의 값인 _blank를 출력
+
+
+// 오류있음 수정필요
+            // $("a").attr({"href" : "http://cafe.naver.com", //href의 속성값이 http://cafe.naver.com으로 바뀌어있음
+            //             "target" : "_parent"
+            //         })
+//   /*   */ // // // / // / /// // // // /// // // // // // // / // / /// // //
+            // $("a").remove("href")
+
+            // $("p").addClass("aqua")             //aqua 클래스가 추가됌
+
+            // $("p").removeClass("red") //지워주고 싶은 클래스 이름을 쓰면 지워짐
+
+            $("p").toggleClass("green") //클래스가 원래 갖고있던거면 없애주고, 없던거면 있게해줌 (On이면 off로 off면 on 으로만들어주는것과 비슷함.)
+            console.log($("p").hasClass("green") ) //hasClass 이 클래스를 갖고있냐?
+            
+        })
+    </script>
+</body>
+</html>
+
