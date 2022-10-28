@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<body>
+    <script>
+        var url = "https://api.openweathermap.org/data/2.5/weather?"
+            url += "appid=832c3462e69aa18c2706a68df74092dc"
+            url += "&units=metric"
+            url += "&lang=kr"
+            url += "&q=incheon"
+
+        /* const getData = function() {}  */   //이름 있는 함수를 ES 5에서표기할때
+        //const getData = () => {}  //ES6에서 쓰는 화살표 함수
+        const getData = (url) => {
+            return fetch(url)
+        }
+        
+        // getData(url).then(data => {
+        //     return data.json()
+        // })  아래는 축약버전으로 사용한 것. 매개변수가 하나면 괄호 생략 가능 , return값 한개만 줄때 축약 가능.
+
+        // getData(url).then(data =>
+        //     data.json()      
+        // )
+
+            
+        
+        /* 축약 완성판 */
+        getData(url).then(data =>
+            data.json()      
+        ).then(
+            result => console.log(result)
+        )
+
+
+
+        
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+Fetch API는 HTTP 파이프라인을 구성하는 요청과 응답 등의 요소를 JavaScript에서 접근하고 조작할 수 있는 인터페이스를 제공합니다. Fetch API가 제공하는 전역 fetch() (en-US) 메서드로 네트워크의 리소스를 쉽게 비동기적으로 가져올 수도 있습니다.
+
+이전에는 이런 기능을 XMLHttpRequest를 사용해 할 수 있었습니다. Fetch는 더 좋은 대체제면서, 서비스 워커 등 다른 기술에서도 쉽게 사용할 수 있는 API입니다. 또한 CORS와 같이 HTTP와 관련된 다른 개념들을 한 곳에 모아서 정의할 수 있는 논리적인 장소도 제공합니다.
+
+fetch 명세는 jQuery.ajax()와 크게 두 가지에서 다릅니다.
+
+fetch()가 반환하는 프로미스 객체는 404, 500과 같은 HTTP 오류 상태를 수신해도 거부되지 않습니다. fetch()의 프로미스는 서버에서 헤더를 포함한 응답을 받는 순간 정상적으로 이행합니다. 대신, 응답의 상태가 200-299를 벗어날 경우 ok (en-US) 속성이 false로 설정됩니다. 
+프로미스가 거부되는 경우는 네트워크 연결이 실패하는 경우를 포함, 아예 요청을 완료하지 못한 경우로 한정됩니다.
+자격 증명(credentials) 옵션 (en-US)을 제공하지 않은 경우, fetch()는 교차 출처 쿠키를 전송하지 않습니다. (2018년 4월 이후, 자격 증명 정책의 기본 값이 same-origin으로 변경됐습니다.)
+
+ -->
