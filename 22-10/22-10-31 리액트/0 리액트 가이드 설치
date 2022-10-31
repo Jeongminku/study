@@ -1,0 +1,57 @@
+도스창 명령어
+
+cd.. : 뒤로가기
+
+dir  : 파일, 폴더 디렉터리 목록 
+
+cd "폴더명" : 폴더명으로 들어감
+
+d드라이브로 이동 :   d:
+c드라이브로 이동 :   c:
+
+드라이브명: -->  이동하고싶은 드라이브로 이동함.   
+
+tab키: 폴더, 파일명 자동 완성
+
+
+
+1. node.js설치
+
+    LTS = Long Term Service 버전 받기.
+
+    특별히 설정없이 Next로 설치.
+
+    CMD 열고 node -v 입력 => 버전이 나오면 제대로 설치 완료.
+
+
+2. yarn, react-create-app 설치
+    
+    터미널에yarn 설치명령어입력 : npm install --global yarn
+
+    터미널에react-create-app 설치명령어입력 : npm install -g create-react-app
+
+
+
+3.프로젝트파일생성
+
+    원하는 폴더에 react 프로젝트 생성
+    • npx로 생성시: npx create-react-app 프로젝트 이름
+    • yarn으로 생성시: yarn create react-app 프로젝트이름
+
+
+
+4. 프로젝트 실행, 종료
+
+    해당 프로젝트로 들어온 후 프로젝트를 실행한다.
+
+    • npm으로실행시: npm start
+    • yarn으로실행시: yarn start
+    • 종료시: Ctrl + C
+
+
+
+5. 기타 참고
+
+    • 리액트포트죽이기
+        • netstat -a -o | find "3000”
+        • taskkill /f /pid 12024
