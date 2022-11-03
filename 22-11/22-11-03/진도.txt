@@ -1,0 +1,23 @@
+02.React - 08번 폴더 / + 05.hook / 
+
+Info.js(useState, useEffect), Counter.js(useReducer)
+
+
+
+
+
+
+
+
+
+
+
+App.js 기본 폼
+
+import Info from "./Info";
+
+function App() {
+  return <Info />;
+}
+
+export default App;
