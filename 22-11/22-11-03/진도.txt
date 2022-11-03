@@ -1,6 +1,14 @@
 02.React - 08번 폴더 / + 05.hook / 
 
-Info.js(useState, useEffect), Counter.js(useReducer)
+Info.js(useState, useEffect), 
+
+Counter.js(useReducer)
+
+Average.js(useMemo, useRef)
+
+MyComponent.js
+
+useInputs   // 선생님 파일로 다시체크해봐야.
 
 
 
